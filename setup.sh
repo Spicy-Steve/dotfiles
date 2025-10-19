@@ -72,14 +72,14 @@ fi
 if [ -f /etc/arch-release ]; then    
     echo "What is the GPU Vendor? (amd/nvidia/intel)"
     read gpu
-    if [ $gpu = "amd" ]; then
+    if [ ${gpu,,} = "amd" ]; then
         $PKG_INSTALL mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon xf86-video-amdgpu
-    elif [ $gpu = "intel" ]; then
+    elif [ ${gpu,,} = "intel" ]; then
         $PKG_INSTALL mesa lib32-mesa vulkan-intel lib32-vulkan-intel xf86-video-intel
-    elif [ $gpu = "nvidia" ]; then
+    elif [ ${gpu,,} = "nvidia" ]; then
         $PKG_INSTALL nvidia nvidia-dkms nvidia-utils lib32-nvidia-utils
-        read -p "Install CUDA? [Y/n]" cudaq
-        if [ ${cudaq,,} = "y" ] || [ ${cudaq,,} = "yes" ] || [ $cudaq = "" ]; then
+        read -p "Install CUDA? [Y/n]" {cudaq,,}
+        if [ $cudaq = "y" ] || [ $cudaq = "yes" ] || [ -z $cudaq ]; then
             $PKG_INSTALL cuda
         else
             echo "Skipping CUDA installation..."
