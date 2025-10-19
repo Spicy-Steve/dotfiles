@@ -1,0 +1,28 @@
+MenuBar=Disabled
+
+[ExtractDialog]
+2 screens: Height=480
+2 screens: Width=858
+DirHistory[$e]=$HOME/Games/
+
+[General]
+DoubleClickViewAction=none
+ShowFullPathInTitlebar=true
+ShowStatusBar=FullWidth
+ShowZoomSlider=true
+Version=202
+ViewPropsTimestamp=2025,2,23,17,19,7.929
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,avif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,heif,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mltpreview,opendocumentthumbnail,svgthumbnail,gdk-pixbuf-thumbnailer
+
+[ViewPropertiesDialog]
+2 screens: Height=584
+2 screens: Width=379

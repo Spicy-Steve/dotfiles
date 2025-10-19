@@ -1,0 +1,1064 @@
+[2025-06-28 18:28:59.721] [info]  [Main] [Main] +++ Starting +++
+[2025-06-28 18:29:01.397] [info]  [AppComponent] [ngOnInit] +++ Started Dopamine 3.0.0-preview.39 +++
+[2025-06-28 18:29:01.441] [warn]  [DiscordApi] [clearPresence] Discord client is not ready. Cannot clear presence.
+[2025-06-28 18:29:01.445] [info]  [AppearanceService] [applyTheme] Applied theme name=Dopamine' and theme classes='default-theme-dark'
+[2025-06-28 18:29:01.461] [info]  [QueuePersister] [restore] Restoring queue
+[2025-06-28 18:29:01.483] [error] [QueuePersister] [restore]  Failed to restore queue. Error: no such table: QueuedTrack
+[2025-06-28 18:29:01.484] [info]  [Queue] [restoreTracks] Restored '0' tracks
+[2025-06-28 18:29:01.486] [info]  [DatabaseMigrator] [migrateAsync] Database is too old (v0). Applying migrations.
+[2025-06-28 18:29:01.488] [info]  [DatabaseMigrator] [getMigrationsAsync] Found migrations: Migration1,Migration2,Migration3,Migration4,Migration5,Migration6
+[2025-06-28 18:29:01.489] [info]  [DatabaseMigrator] [migrateAsync] Applying migration Migration1
+[2025-06-28 18:29:01.500] [info]  [DatabaseMigrator] [migrateAsync] Migration Migration1 success
+[2025-06-28 18:29:01.501] [info]  [DatabaseMigrator] [migrateAsync] Applying migration Migration2
+[2025-06-28 18:29:01.509] [info]  [DatabaseMigrator] [migrateAsync] Migration Migration2 success
+[2025-06-28 18:29:01.510] [info]  [DatabaseMigrator] [migrateAsync] Applying migration Migration3
+[2025-06-28 18:29:01.518] [info]  [DatabaseMigrator] [migrateAsync] Migration Migration3 success
+[2025-06-28 18:29:01.519] [info]  [DatabaseMigrator] [migrateAsync] Applying migration Migration4
+[2025-06-28 18:29:01.528] [info]  [DatabaseMigrator] [migrateAsync] Migration Migration4 success
+[2025-06-28 18:29:01.529] [info]  [DatabaseMigrator] [migrateAsync] Applying migration Migration5
+[2025-06-28 18:29:01.537] [info]  [DatabaseMigrator] [migrateAsync] Migration Migration5 success
+[2025-06-28 18:29:01.538] [info]  [DatabaseMigrator] [migrateAsync] Applying migration Migration6
+[2025-06-28 18:29:01.573] [info]  [DatabaseMigrator] [migrateAsync] Migration Migration6 success
+[2025-06-28 18:29:12.754] [info]  [FolderService] [addNewFolderAsync] Added folder with path '/home/spicysteve/Music'
+[2025-06-28 18:29:19.854] [info]  [DatabaseMigrator] [migrateAsync] The database is up to date. No migrations to perform.
+[2025-06-28 18:29:19.857] [info]  [FileService] [getAllParameters] Parameters: /tmp/.mount_dopamiQvoetc/dopamine, --no-sandbox
+[2025-06-28 18:29:19.859] [info]  [FileService] [getAllParameters] File queue: 
+[2025-06-28 18:29:19.859] [info]  [FileService] [hasPlayableFilesAsGivenParameters] Found parameters: /tmp/.mount_dopamiQvoetc/dopamine, --no-sandbox
+[2025-06-28 18:29:19.917] [info]  [ArtistSorter] [sortAscending] Finished sorting artists ascending. Time required: 17 ms
+[2025-06-28 18:29:19.918] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 18 ms
+[2025-06-28 18:29:19.919] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-06-28 18:29:19.921] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-06-28 18:29:19.922] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:29:19.923] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-06-28 18:29:19.924] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:29:20.456] [info]  [ArtistService] [getArtists] Finished getting artists. Time required: 1 ms
+[2025-06-28 18:29:20.457] [info]  [ArtistService] [getArtists] Finished splitting artists. Time required: 1 ms
+[2025-06-28 18:29:20.458] [info]  [ArtistSorter] [sortAscending] Finished sorting artists ascending. Time required: 0 ms
+[2025-06-28 18:29:20.459] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 1 ms
+[2025-06-28 18:29:20.510] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 2 ms
+[2025-06-28 18:29:20.512] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-06-28 18:29:20.563] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 1 ms
+[2025-06-28 18:29:20.564] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-06-28 18:29:20.565] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:29:21.885] [info]  [IndexingService] [indexCollection] Indexing collection.
+[2025-06-28 18:29:21.887] [info]  [UpdateService] [checkForUpdatesAsync] Checking for updates
+[2025-06-28 18:29:22.158] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Indexing collection.
+[2025-06-28 18:29:22.227] [info]  [CollectionChecker] [isCollectionOutdatedAsync] Collection is outdated: tracksNeedIndexing=false, numberOfTracksHasChanged=true, lastDateModifiedHasChanged=true
+[2025-06-28 18:29:22.228] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Collection is outdated.
+[2025-06-28 18:29:22.228] [info]  [TrackIndexer] [indexTracksAsync] +++ STARTED INDEXING TRACKS +++
+[2025-06-28 18:29:22.229] [info]  [TrackRemover] [removeTracksThatDoNoNotBelongToFoldersAsync] There are no tracks to remove. Time required: 0 ms
+[2025-06-28 18:29:22.230] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Found 0 tracks.
+[2025-06-28 18:29:22.231] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Removed 0 tracks. Time required: 1 ms
+[2025-06-28 18:29:22.231] [info]  [TrackRemover] [removeFolderTracksForInexistingTracksAsync] There are no folder tracks to remove. Time required: 0 ms
+[2025-06-28 18:29:22.232] [info]  [TrackUpdater] [updateTracksThatAreOutOfDateAsync] Updated tracks: 0. Time required: 0 ms
+[2025-06-28 18:29:22.315] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 1 tracks
+[2025-06-28 18:29:22.475] [info]  [UpdateService] [checkForUpdatesAsync] Current=3.0.0-preview.39, Latest=3.0.0-preview.39-fix-776
+[2025-06-28 18:29:22.476] [info]  [UpdateService] [checkForUpdatesAsync] Latest (3.0.0-preview.39-fix-776) <= Current (3.0.0-preview.39). Nothing to do.
+[2025-06-28 18:29:28.903] [info]  [AppearanceService] [applyTheme] Applied theme name=Naughty' and theme classes='default-theme-dark'
+[2025-06-28 18:29:29.183] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 268 tracks
+[2025-06-28 18:29:37.200] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 542 tracks
+[2025-06-28 18:29:45.577] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 817 tracks
+[2025-06-28 18:29:53.176] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 1091 tracks
+[2025-06-28 18:30:01.774] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 1366 tracks
+[2025-06-28 18:30:01.913] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Added tracks: 1372. Time required: 39680 ms
+[2025-06-28 18:30:01.913] [info]  [TrackIndexer] [indexTracksAsync] +++ FINISHED INDEXING TRACKS (Time required: 39685 ms) +++
+[2025-06-28 18:30:01.932] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ STARTED INDEXING ALBUM ARTWORK +++
+[2025-06-28 18:30:01.935] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] There is no album artwork to remove. Time required: 1 ms.
+[2025-06-28 18:30:01.936] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] There is no album artwork to remove. Time required: 1 ms.
+[2025-06-28 18:30:01.941] [info]  [AlbumArtworkAdder] [addAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 128 album data that needs indexing
+[2025-06-28 18:30:11.537] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 127 album artwork in the database
+[2025-06-28 18:30:11.538] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 127 artworkIds in the database
+[2025-06-28 18:30:11.549] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 127 artwork files on disk
+[2025-06-28 18:30:11.551] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ FINISHED INDEXING ALBUM ARTWORK (Time required: 9618 ms) +++
+[2025-06-28 18:30:22.416] [info]  [ArtistSorter] [sortAscending] Finished sorting artists ascending. Time required: 0 ms
+[2025-06-28 18:30:22.418] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 2 ms
+[2025-06-28 18:30:22.419] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-06-28 18:30:22.419] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-06-28 18:30:22.420] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:30:22.421] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-06-28 18:30:22.422] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:30:22.978] [info]  [ArtistService] [getArtists] Finished getting artists. Time required: 2 ms
+[2025-06-28 18:30:22.980] [info]  [ArtistService] [getArtists] Finished splitting artists. Time required: 1 ms
+[2025-06-28 18:30:22.985] [info]  [ArtistSorter] [sortAscending] Finished sorting artists ascending. Time required: 4 ms
+[2025-06-28 18:30:22.987] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 6 ms
+[2025-06-28 18:30:23.041] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 5 ms
+[2025-06-28 18:30:23.043] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-06-28 18:30:23.044] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 2 ms
+[2025-06-28 18:30:23.143] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 20 ms
+[2025-06-28 18:30:23.149] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 5 ms
+[2025-06-28 18:30:23.150] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 6 ms
+[2025-06-28 18:30:30.152] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-06-28 18:30:30.153] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-06-28 18:30:30.814] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 1 ms
+[2025-06-28 18:30:30.815] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 2 ms
+[2025-06-28 18:30:32.211] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-06-28 18:30:32.212] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-06-28 18:30:32.755] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 1 ms
+[2025-06-28 18:30:32.756] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 2 ms
+[2025-06-28 18:30:33.493] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-06-28 18:30:33.494] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-06-28 18:30:34.276] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-06-28 18:30:34.278] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 2 ms
+[2025-06-28 18:30:39.907] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-06-28 18:30:39.908] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-06-28 18:30:39.909] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:30:39.909] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-06-28 18:30:39.910] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:30:40.471] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 4 ms
+[2025-06-28 18:30:40.474] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 1 ms
+[2025-06-28 18:30:40.474] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-06-28 18:30:40.555] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 21 ms
+[2025-06-28 18:30:40.560] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 4 ms
+[2025-06-28 18:30:40.562] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 6 ms
+[2025-06-28 18:33:02.207] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 21 ms
+[2025-06-28 18:33:04.293] [info]  [QueuePersister] [save] Saving queue
+[2025-06-28 18:33:04.304] [info]  [QueuePersister] [save] Saved queue of 0 tracks
+[2025-06-28 18:33:04.323] [warn]  [DiscordApi] [shutdown] Discord client not found.
+[2025-06-28 18:33:14.871] [info]  [Main] [Main] +++ Starting +++
+[2025-06-28 18:33:16.404] [info]  [AppComponent] [ngOnInit] +++ Started Dopamine 3.0.0-preview.39 +++
+[2025-06-28 18:33:16.449] [info]  [AppearanceService] [applyTheme] Applied theme name=Naughty' and theme classes='default-theme-dark'
+[2025-06-28 18:33:16.468] [info]  [QueuePersister] [restore] Restoring queue
+[2025-06-28 18:33:16.492] [info]  [QueuePersister] [restore] No saved queued tracks found
+[2025-06-28 18:33:16.493] [info]  [Queue] [restoreTracks] Restored '0' tracks
+[2025-06-28 18:33:16.495] [info]  [DatabaseMigrator] [migrateAsync] The database is up to date. No migrations to perform.
+[2025-06-28 18:33:16.499] [info]  [FileService] [getAllParameters] Parameters: /tmp/.mount_dopamiyucMEc/dopamine, --no-sandbox
+[2025-06-28 18:33:16.500] [info]  [FileService] [getAllParameters] File queue: 
+[2025-06-28 18:33:16.501] [info]  [FileService] [hasPlayableFilesAsGivenParameters] Found parameters: /tmp/.mount_dopamiyucMEc/dopamine, --no-sandbox
+[2025-06-28 18:33:17.450] [info]  [DiscordService] [updatePresence] No currentTrack was found. Not setting Discord Rich Presence.
+[2025-06-28 18:33:18.529] [info]  [IndexingService] [indexCollection] Indexing collection.
+[2025-06-28 18:33:18.531] [info]  [UpdateService] [checkForUpdatesAsync] Checking for updates
+[2025-06-28 18:33:18.827] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Indexing collection.
+[2025-06-28 18:33:18.898] [info]  [CollectionChecker] [isCollectionOutdatedAsync] Collection is up to date
+[2025-06-28 18:33:18.898] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Collection is not outdated.
+[2025-06-28 18:33:18.903] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ STARTED INDEXING ALBUM ARTWORK +++
+[2025-06-28 18:33:18.907] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] There is no album artwork to remove. Time required: 2 ms.
+[2025-06-28 18:33:18.911] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] There is no album artwork to remove. Time required: 2 ms.
+[2025-06-28 18:33:18.915] [info]  [AlbumArtworkAdder] [addAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 1 album data that needs indexing
+[2025-06-28 18:33:18.930] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 127 album artwork in the database
+[2025-06-28 18:33:18.930] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 127 artworkIds in the database
+[2025-06-28 18:33:18.936] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 127 artwork files on disk
+[2025-06-28 18:33:18.938] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ FINISHED INDEXING ALBUM ARTWORK (Time required: 34 ms) +++
+[2025-06-28 18:33:19.106] [info]  [UpdateService] [checkForUpdatesAsync] Current=3.0.0-preview.39, Latest=3.0.0-preview.39-fix-776
+[2025-06-28 18:33:19.106] [info]  [UpdateService] [checkForUpdatesAsync] Latest (3.0.0-preview.39-fix-776) <= Current (3.0.0-preview.39). Nothing to do.
+[2025-06-28 18:35:26.275] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 26 ms
+[2025-06-28 18:35:26.523] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 25 ms
+[2025-06-28 18:35:29.965] [info]  [QueuePersister] [save] Saving queue
+[2025-06-28 18:35:29.977] [info]  [QueuePersister] [save] Saved queue of 0 tracks
+[2025-06-28 18:35:29.986] [warn]  [DiscordApi] [shutdown] Discord client not found.
+[2025-06-28 18:35:33.264] [info]  [Main] [Main] +++ Starting +++
+[2025-06-28 18:35:34.941] [info]  [AppComponent] [ngOnInit] +++ Started Dopamine 3.0.0-preview.39 +++
+[2025-06-28 18:35:34.994] [info]  [AppearanceService] [applyTheme] Applied theme name=Naughty' and theme classes='default-theme-dark'
+[2025-06-28 18:35:35.015] [info]  [QueuePersister] [restore] Restoring queue
+[2025-06-28 18:35:35.039] [info]  [QueuePersister] [restore] No saved queued tracks found
+[2025-06-28 18:35:35.040] [info]  [Queue] [restoreTracks] Restored '0' tracks
+[2025-06-28 18:35:35.042] [info]  [DatabaseMigrator] [migrateAsync] The database is up to date. No migrations to perform.
+[2025-06-28 18:35:35.047] [info]  [FileService] [getAllParameters] Parameters: /tmp/.mount_dopamiPQg3vE/dopamine, --no-sandbox
+[2025-06-28 18:35:35.048] [info]  [FileService] [getAllParameters] File queue: 
+[2025-06-28 18:35:35.050] [info]  [FileService] [hasPlayableFilesAsGivenParameters] Found parameters: /tmp/.mount_dopamiPQg3vE/dopamine, --no-sandbox
+[2025-06-28 18:35:35.991] [info]  [DiscordService] [updatePresence] No currentTrack was found. Not setting Discord Rich Presence.
+[2025-06-28 18:35:37.080] [info]  [IndexingService] [indexCollection] Indexing collection.
+[2025-06-28 18:35:37.083] [info]  [UpdateService] [checkForUpdatesAsync] Checking for updates
+[2025-06-28 18:35:37.398] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Indexing collection.
+[2025-06-28 18:35:37.486] [info]  [CollectionChecker] [isCollectionOutdatedAsync] Collection is up to date
+[2025-06-28 18:35:37.487] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Collection is not outdated.
+[2025-06-28 18:35:37.498] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ STARTED INDEXING ALBUM ARTWORK +++
+[2025-06-28 18:35:37.504] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] There is no album artwork to remove. Time required: 4 ms.
+[2025-06-28 18:35:37.507] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] There is no album artwork to remove. Time required: 2 ms.
+[2025-06-28 18:35:37.511] [info]  [AlbumArtworkAdder] [addAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 1 album data that needs indexing
+[2025-06-28 18:35:37.528] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 127 album artwork in the database
+[2025-06-28 18:35:37.529] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 127 artworkIds in the database
+[2025-06-28 18:35:37.533] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 127 artwork files on disk
+[2025-06-28 18:35:37.535] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ FINISHED INDEXING ALBUM ARTWORK (Time required: 35 ms) +++
+[2025-06-28 18:35:37.659] [info]  [UpdateService] [checkForUpdatesAsync] Current=3.0.0-preview.39, Latest=3.0.0-preview.39-fix-776
+[2025-06-28 18:35:37.660] [info]  [UpdateService] [checkForUpdatesAsync] Latest (3.0.0-preview.39-fix-776) <= Current (3.0.0-preview.39). Nothing to do.
+[2025-06-28 18:36:02.596] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 15 ms
+[2025-06-28 18:36:03.458] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-06-28 18:36:03.694] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-06-28 18:36:03.835] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-06-28 18:36:03.990] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-06-28 18:36:14.480] [error] [PlaylistService] [decodePlaylistAsync]  Could not decode playlist with path='/home/spicysteve/Music/Dopamine/Playlists/W NWA2.m3u'. Error: ENOENT: no such file or directory, open '/home/spicysteve/Music/Dopamine/Playlists/W NWA2.m3u'
+[2025-06-28 18:36:14.626] [error] [PlaylistService] [decodePlaylistAsync]  Could not decode playlist with path='/home/spicysteve/Music/Dopamine/Playlists/W NWA2.m3u'. Error: ENOENT: no such file or directory, open '/home/spicysteve/Music/Dopamine/Playlists/W NWA2.m3u'
+[2025-06-28 18:36:14.814] [error] [PlaylistService] [decodePlaylistAsync]  Could not decode playlist with path='/home/spicysteve/Music/Dopamine/Playlists/W NWA2.m3u'. Error: ENOENT: no such file or directory, open '/home/spicysteve/Music/Dopamine/Playlists/W NWA2.m3u'
+[2025-06-28 18:36:14.815] [error] [GlobalErrorHandler] [handleError]  Handling global error. Error: Uncaught (in promise): Error: ENOENT: no such file or directory, open '/home/spicysteve/Music/Dopamine/Playlists/W NWA2.m3u'
+Error: ENOENT: no such file or directory, open '/home/spicysteve/Music/Dopamine/Playlists/W NWA2.m3u'
+    at file:///tmp/.mount_dopamiPQg3vE/resources/app.asar/dist/main.a6b46f59450e08c3.js:1:1708354
+    at Generator.throw (<anonymous>)
+    at U (file:///tmp/.mount_dopamiPQg3vE/resources/app.asar/dist/main.a6b46f59450e08c3.js:9:183495)
+    at K (file:///tmp/.mount_dopamiPQg3vE/resources/app.asar/dist/main.a6b46f59450e08c3.js:9:183735)
+    at v.invoke (file:///tmp/.mount_dopamiPQg3vE/resources/app.asar/dist/polyfills.f90589ed579cbda3.js:1:6596)
+    at Object.onInvoke (file:///tmp/.mount_dopamiPQg3vE/resources/app.asar/dist/main.a6b46f59450e08c3.js:1:76439)
+    at v.invoke (file:///tmp/.mount_dopamiPQg3vE/resources/app.asar/dist/polyfills.f90589ed579cbda3.js:1:6536)
+    at L.run (file:///tmp/.mount_dopamiPQg3vE/resources/app.asar/dist/polyfills.f90589ed579cbda3.js:1:1977)
+    at file:///tmp/.mount_dopamiPQg3vE/resources/app.asar/dist/polyfills.f90589ed579cbda3.js:1:16806
+    at v.invokeTask (file:///tmp/.mount_dopamiPQg3vE/resources/app.asar/dist/polyfills.f90589ed579cbda3.js:1:7214)
+[2025-06-28 18:36:14.816] [info]  [GlobalErrorHandler] [showGlobalErrorDialog] Showing global error dialog
+[2025-06-28 18:36:16.483] [info]  [GlobalErrorHandler] [showGlobalErrorDialog] Closing application
+[2025-06-28 18:36:16.488] [info]  [QueuePersister] [save] Saving queue
+[2025-06-28 18:36:16.580] [info]  [QueuePersister] [save] Saved queue of 0 tracks
+[2025-06-28 18:36:16.587] [warn]  [DiscordApi] [shutdown] Discord client not found.
+[2025-06-28 18:36:20.356] [info]  [Main] [Main] +++ Starting +++
+[2025-06-28 18:36:21.765] [info]  [AppComponent] [ngOnInit] +++ Started Dopamine 3.0.0-preview.39 +++
+[2025-06-28 18:36:21.810] [info]  [AppearanceService] [applyTheme] Applied theme name=Naughty' and theme classes='default-theme-dark'
+[2025-06-28 18:36:21.825] [info]  [QueuePersister] [restore] Restoring queue
+[2025-06-28 18:36:21.845] [info]  [QueuePersister] [restore] No saved queued tracks found
+[2025-06-28 18:36:21.846] [info]  [Queue] [restoreTracks] Restored '0' tracks
+[2025-06-28 18:36:21.850] [info]  [DatabaseMigrator] [migrateAsync] The database is up to date. No migrations to perform.
+[2025-06-28 18:36:21.855] [info]  [FileService] [getAllParameters] Parameters: /tmp/.mount_dopami4T1QHu/dopamine, --no-sandbox
+[2025-06-28 18:36:21.855] [info]  [FileService] [getAllParameters] File queue: 
+[2025-06-28 18:36:21.856] [info]  [FileService] [hasPlayableFilesAsGivenParameters] Found parameters: /tmp/.mount_dopami4T1QHu/dopamine, --no-sandbox
+[2025-06-28 18:36:22.529] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 14 ms
+[2025-06-28 18:36:22.810] [info]  [DiscordService] [updatePresence] No currentTrack was found. Not setting Discord Rich Presence.
+[2025-06-28 18:36:23.882] [info]  [IndexingService] [indexCollection] Indexing collection.
+[2025-06-28 18:36:23.884] [info]  [UpdateService] [checkForUpdatesAsync] Checking for updates
+[2025-06-28 18:36:24.131] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Indexing collection.
+[2025-06-28 18:36:24.190] [info]  [CollectionChecker] [isCollectionOutdatedAsync] Collection is up to date
+[2025-06-28 18:36:24.191] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Collection is not outdated.
+[2025-06-28 18:36:24.196] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ STARTED INDEXING ALBUM ARTWORK +++
+[2025-06-28 18:36:24.199] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] There is no album artwork to remove. Time required: 2 ms.
+[2025-06-28 18:36:24.201] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] There is no album artwork to remove. Time required: 2 ms.
+[2025-06-28 18:36:24.204] [info]  [AlbumArtworkAdder] [addAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 1 album data that needs indexing
+[2025-06-28 18:36:24.214] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 127 album artwork in the database
+[2025-06-28 18:36:24.215] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 127 artworkIds in the database
+[2025-06-28 18:36:24.216] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 127 artwork files on disk
+[2025-06-28 18:36:24.217] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ FINISHED INDEXING ALBUM ARTWORK (Time required: 20 ms) +++
+[2025-06-28 18:36:24.526] [info]  [UpdateService] [checkForUpdatesAsync] Current=3.0.0-preview.39, Latest=3.0.0-preview.39-fix-776
+[2025-06-28 18:36:24.527] [info]  [UpdateService] [checkForUpdatesAsync] Latest (3.0.0-preview.39-fix-776) <= Current (3.0.0-preview.39). Nothing to do.
+[2025-06-28 18:37:15.733] [info]  [Queue] [setTracks] Set '13' tracks. Shuffle=false
+[2025-06-28 18:37:15.734] [info]  [PlaybackService] [stopAndPlay] Stopping ''
+[2025-06-28 18:37:15.741] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:37:16.753] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:37:16.756] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:37:17.755] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 18:37:39.901] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:37:40.906] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:37:40.907] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:37:46.229] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:37:47.234] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:37:47.236] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:39:03.077] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:39:04.084] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:39:04.086] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:39:54.793] [info]  [QueuePersister] [save] Saving queue
+[2025-06-28 18:39:54.803] [info]  [QueuePersister] [save] Saved queue of 13 tracks
+[2025-06-28 18:39:54.809] [info]  [DiscordApi] [shutdown] Discord client destroyed.
+[2025-06-28 18:39:57.223] [info]  [Main] [Main] +++ Starting +++
+[2025-06-28 18:39:58.620] [info]  [AppComponent] [ngOnInit] +++ Started Dopamine 3.0.0-preview.39 +++
+[2025-06-28 18:39:58.662] [info]  [AppearanceService] [applyTheme] Applied theme name=Naughty' and theme classes='default-theme-dark'
+[2025-06-28 18:39:58.675] [info]  [QueuePersister] [restore] Restoring queue
+[2025-06-28 18:39:58.696] [info]  [QueuePersister] [restore] Restored queue of 13 tracks. Time required: 1 ms
+[2025-06-28 18:39:58.697] [info]  [Queue] [restoreTracks] Restored '13' tracks
+[2025-06-28 18:39:58.700] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:39:58.700] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:39:58.701] [error] [MetadataService] [createAlbumImageUrlAsync]  Could not create image URL for track with path=/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3. Error: ENOENT: no such file or directory, open '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:39:58.703] [info]  [DatabaseMigrator] [migrateAsync] The database is up to date. No migrations to perform.
+[2025-06-28 18:39:58.705] [info]  [FileService] [getAllParameters] Parameters: /tmp/.mount_dopamiFP7Vtx/dopamine, --no-sandbox
+[2025-06-28 18:39:58.706] [info]  [FileService] [getAllParameters] File queue: 
+[2025-06-28 18:39:58.706] [info]  [FileService] [hasPlayableFilesAsGivenParameters] Found parameters: /tmp/.mount_dopamiFP7Vtx/dopamine, --no-sandbox
+[2025-06-28 18:39:58.781] [error] [MetadataService] [createAlbumImageUrlAsync]  Could not create image URL for track with path=/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3. Error: ENOENT: no such file or directory, open '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:39:58.784] [error] [MetadataService] [createAlbumImageUrlAsync]  Could not create image URL for track with path=/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3. Error: ENOENT: no such file or directory, open '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:39:59.703] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:39:59.706] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:40:00.700] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 18:40:00.732] [info]  [IndexingService] [indexCollection] Indexing collection.
+[2025-06-28 18:40:00.733] [info]  [UpdateService] [checkForUpdatesAsync] Checking for updates
+[2025-06-28 18:40:00.976] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Indexing collection.
+[2025-06-28 18:40:01.000] [info]  [CollectionChecker] [isCollectionOutdatedAsync] Collection is outdated: tracksNeedIndexing=false, numberOfTracksHasChanged=true, lastDateModifiedHasChanged=false
+[2025-06-28 18:40:01.000] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Collection is outdated.
+[2025-06-28 18:40:01.000] [info]  [TrackIndexer] [indexTracksAsync] +++ STARTED INDEXING TRACKS +++
+[2025-06-28 18:40:01.003] [info]  [TrackRemover] [removeTracksThatDoNoNotBelongToFoldersAsync] There are no tracks to remove. Time required: 2 ms
+[2025-06-28 18:40:01.018] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Found 1372 tracks.
+[2025-06-28 18:40:01.383] [info]  [UpdateService] [checkForUpdatesAsync] Current=3.0.0-preview.39, Latest=3.0.0-preview.39-fix-776
+[2025-06-28 18:40:01.384] [info]  [UpdateService] [checkForUpdatesAsync] Latest (3.0.0-preview.39-fix-776) <= Current (3.0.0-preview.39). Nothing to do.
+[2025-06-28 18:40:17.325] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Removed 1343 tracks. Time required: 16322 ms
+[2025-06-28 18:40:17.326] [info]  [TrackRemover] [removeFolderTracksForInexistingTracksAsync] Found 1343 folder tracks to remove.
+[2025-06-28 18:40:17.335] [info]  [TrackRemover] [removeFolderTracksForInexistingTracksAsync] Removed 1343 folder tracks. Time required: 9 ms
+[2025-06-28 18:40:17.337] [info]  [TrackUpdater] [updateTracksThatAreOutOfDateAsync] Updated tracks: 0. Time required: 2 ms
+[2025-06-28 18:40:17.997] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 3 tracks
+[2025-06-28 18:40:18.530] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 6 tracks
+[2025-06-28 18:40:18.613] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 9 tracks
+[2025-06-28 18:40:18.670] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 12 tracks
+[2025-06-28 18:40:18.728] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 15 tracks
+[2025-06-28 18:40:18.728] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Added tracks: 15. Time required: 1391 ms
+[2025-06-28 18:40:18.728] [info]  [TrackIndexer] [indexTracksAsync] +++ FINISHED INDEXING TRACKS (Time required: 17727 ms) +++
+[2025-06-28 18:40:18.736] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ STARTED INDEXING ALBUM ARTWORK +++
+[2025-06-28 18:40:18.738] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] Found 123 album artwork.
+[2025-06-28 18:40:18.747] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] Removed 123 album artwork. Time required: 10 ms.
+[2025-06-28 18:40:18.749] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 2 album artwork.
+[2025-06-28 18:40:18.758] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Removed 2 album artwork. Time required: 10 ms.
+[2025-06-28 18:40:18.761] [info]  [AlbumArtworkAdder] [addAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 2 album data that needs indexing
+[2025-06-28 18:40:19.201] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 4 album artwork in the database
+[2025-06-28 18:40:19.201] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 4 artworkIds in the database
+[2025-06-28 18:40:19.220] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 129 artwork files on disk
+[2025-06-28 18:40:19.236] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ FINISHED INDEXING ALBUM ARTWORK (Time required: 499 ms) +++
+[2025-06-28 18:40:19.238] [error] [MetadataService] [createAlbumImageUrlAsync]  Could not create image URL for track with path=/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3. Error: ENOENT: no such file or directory, open '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:40:19.239] [error] [MetadataService] [createAlbumImageUrlAsync]  Could not create image URL for track with path=/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3. Error: ENOENT: no such file or directory, open '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:40:54.870] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 15 ms
+[2025-06-28 18:40:55.008] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-06-28 18:40:57.730] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:40:58.731] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:40:58.733] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:40:59.920] [info]  [Queue] [setTracks] Set '2' tracks. Shuffle=false
+[2025-06-28 18:40:59.921] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:40:59.927] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Beastie Boys/I'll Communication/Beastie Boys - Sure Shot.mp3'
+[2025-06-28 18:41:00.927] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:41:00.928] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:41:01.935] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!Beastie Boys/To The 5 Boroughs/Beastie Boys - Ch-Check It Out.mp3'
+[2025-06-28 18:41:14.925] [info]  [Queue] [setTracks] Set '2' tracks. Shuffle=false
+[2025-06-28 18:41:14.926] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/!Beastie Boys/I'll Communication/Beastie Boys - Sure Shot.mp3'
+[2025-06-28 18:41:14.932] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Beastie Boys/I'll Communication/Beastie Boys - Sure Shot.mp3'
+[2025-06-28 18:41:15.940] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:41:15.942] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:41:16.883] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Beastie Boys/I'll Communication/Beastie Boys - Sure Shot.mp3'
+[2025-06-28 18:41:16.948] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!Beastie Boys/To The 5 Boroughs/Beastie Boys - Ch-Check It Out.mp3'
+[2025-06-28 18:41:17.884] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:41:17.886] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:41:18.461] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-06-28 18:41:18.462] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-06-28 18:41:18.462] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 0 ms
+[2025-06-28 18:41:18.463] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-06-28 18:41:18.464] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:41:18.686] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 2 ms
+[2025-06-28 18:41:19.020] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 1 ms
+[2025-06-28 18:41:19.084] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 2 ms
+[2025-06-28 18:41:19.555] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 1 ms
+[2025-06-28 18:41:20.985] [info]  [ArtistSorter] [sortAscending] Finished sorting artists ascending. Time required: 0 ms
+[2025-06-28 18:41:20.986] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 1 ms
+[2025-06-28 18:41:20.987] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-06-28 18:41:20.988] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-06-28 18:41:20.988] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 0 ms
+[2025-06-28 18:41:20.989] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-06-28 18:41:20.989] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 0 ms
+[2025-06-28 18:41:21.540] [info]  [ArtistService] [getArtists] Finished getting artists. Time required: 1 ms
+[2025-06-28 18:41:21.541] [info]  [ArtistService] [getArtists] Finished splitting artists. Time required: 1 ms
+[2025-06-28 18:41:21.543] [info]  [ArtistSorter] [sortAscending] Finished sorting artists ascending. Time required: 1 ms
+[2025-06-28 18:41:21.543] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 1 ms
+[2025-06-28 18:41:21.593] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 1 ms
+[2025-06-28 18:41:21.594] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-06-28 18:41:21.595] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-06-28 18:41:21.647] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 2 ms
+[2025-06-28 18:41:21.648] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-06-28 18:41:21.649] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:41:23.104] [info]  [QueuePersister] [save] Saving queue
+[2025-06-28 18:41:23.113] [info]  [QueuePersister] [save] Saved queue of 2 tracks
+[2025-06-28 18:41:23.120] [info]  [DiscordApi] [shutdown] Discord client destroyed.
+[2025-06-28 18:43:56.531] [info]  [Main] [Main] +++ Starting +++
+[2025-06-28 18:43:57.950] [info]  [AppComponent] [ngOnInit] +++ Started Dopamine 3.0.0-preview.39 +++
+[2025-06-28 18:43:57.988] [info]  [AppearanceService] [applyTheme] Applied theme name=Naughty' and theme classes='default-theme-dark'
+[2025-06-28 18:43:58.004] [info]  [QueuePersister] [restore] Restoring queue
+[2025-06-28 18:43:58.024] [info]  [QueuePersister] [restore] Restored queue of 2 tracks. Time required: 0 ms
+[2025-06-28 18:43:58.025] [info]  [Queue] [restoreTracks] Restored '1' tracks
+[2025-06-28 18:43:58.038] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Beastie Boys/I'll Communication/Beastie Boys - Sure Shot.mp3'
+[2025-06-28 18:43:58.039] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Beastie Boys/I'll Communication/Beastie Boys - Sure Shot.mp3'
+[2025-06-28 18:43:58.059] [info]  [DatabaseMigrator] [migrateAsync] The database is up to date. No migrations to perform.
+[2025-06-28 18:43:58.061] [info]  [FileService] [getAllParameters] Parameters: /tmp/.mount_dopamippMrWS/dopamine, --no-sandbox
+[2025-06-28 18:43:58.062] [info]  [FileService] [getAllParameters] File queue: 
+[2025-06-28 18:43:58.063] [info]  [FileService] [hasPlayableFilesAsGivenParameters] Found parameters: /tmp/.mount_dopamippMrWS/dopamine, --no-sandbox
+[2025-06-28 18:43:58.112] [info]  [ArtistSorter] [sortAscending] Finished sorting artists ascending. Time required: 15 ms
+[2025-06-28 18:43:58.113] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 16 ms
+[2025-06-28 18:43:58.114] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-06-28 18:43:58.115] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-06-28 18:43:58.116] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:43:58.118] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-06-28 18:43:58.119] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:43:58.658] [info]  [ArtistService] [getArtists] Finished getting artists. Time required: 1 ms
+[2025-06-28 18:43:58.659] [info]  [ArtistService] [getArtists] Finished splitting artists. Time required: 1 ms
+[2025-06-28 18:43:58.661] [info]  [ArtistSorter] [sortAscending] Finished sorting artists ascending. Time required: 1 ms
+[2025-06-28 18:43:58.663] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 3 ms
+[2025-06-28 18:43:58.712] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 2 ms
+[2025-06-28 18:43:58.714] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-06-28 18:43:58.714] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-06-28 18:43:58.769] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 2 ms
+[2025-06-28 18:43:58.771] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 1 ms
+[2025-06-28 18:43:58.771] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:43:59.041] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:43:59.044] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:44:00.042] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!Beastie Boys/I'll Communication/Beastie Boys - Sure Shot.mp3'
+[2025-06-28 18:44:00.083] [info]  [IndexingService] [indexCollection] Indexing collection.
+[2025-06-28 18:44:00.084] [info]  [UpdateService] [checkForUpdatesAsync] Checking for updates
+[2025-06-28 18:44:00.315] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Indexing collection.
+[2025-06-28 18:44:00.343] [info]  [CollectionChecker] [isCollectionOutdatedAsync] Collection is outdated: tracksNeedIndexing=false, numberOfTracksHasChanged=true, lastDateModifiedHasChanged=true
+[2025-06-28 18:44:00.343] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Collection is outdated.
+[2025-06-28 18:44:00.343] [info]  [TrackIndexer] [indexTracksAsync] +++ STARTED INDEXING TRACKS +++
+[2025-06-28 18:44:00.344] [info]  [TrackRemover] [removeTracksThatDoNoNotBelongToFoldersAsync] There are no tracks to remove. Time required: 0 ms
+[2025-06-28 18:44:00.346] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Found 44 tracks.
+[2025-06-28 18:44:00.346] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Removed 0 tracks. Time required: 1 ms
+[2025-06-28 18:44:00.347] [info]  [TrackRemover] [removeFolderTracksForInexistingTracksAsync] There are no folder tracks to remove. Time required: 1 ms
+[2025-06-28 18:44:00.349] [info]  [TrackUpdater] [updateTracksThatAreOutOfDateAsync] Updated tracks: 0. Time required: 1 ms
+[2025-06-28 18:44:00.766] [info]  [UpdateService] [checkForUpdatesAsync] Current=3.0.0-preview.39, Latest=3.0.0-preview.39-fix-776
+[2025-06-28 18:44:00.767] [info]  [UpdateService] [checkForUpdatesAsync] Latest (3.0.0-preview.39-fix-776) <= Current (3.0.0-preview.39). Nothing to do.
+[2025-06-28 18:44:01.015] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 33 tracks
+[2025-06-28 18:44:01.636] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 66 tracks
+[2025-06-28 18:44:02.316] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 100 tracks
+[2025-06-28 18:44:02.966] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 133 tracks
+[2025-06-28 18:44:03.622] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 167 tracks
+[2025-06-28 18:44:03.622] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Added tracks: 167. Time required: 3273 ms
+[2025-06-28 18:44:03.622] [info]  [TrackIndexer] [indexTracksAsync] +++ FINISHED INDEXING TRACKS (Time required: 3278 ms) +++
+[2025-06-28 18:44:03.627] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ STARTED INDEXING ALBUM ARTWORK +++
+[2025-06-28 18:44:03.629] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] There is no album artwork to remove. Time required: 0 ms.
+[2025-06-28 18:44:03.630] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 1 album artwork.
+[2025-06-28 18:44:03.639] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Removed 1 album artwork. Time required: 10 ms.
+[2025-06-28 18:44:03.641] [info]  [AlbumArtworkAdder] [addAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 17 album data that needs indexing
+[2025-06-28 18:44:04.150] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 20 album artwork in the database
+[2025-06-28 18:44:04.151] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 20 artworkIds in the database
+[2025-06-28 18:44:04.152] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 21 artwork files on disk
+[2025-06-28 18:44:04.153] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ FINISHED INDEXING ALBUM ARTWORK (Time required: 526 ms) +++
+[2025-06-28 18:44:04.705] [info]  [ArtistService] [getArtists] Finished getting artists. Time required: 2 ms
+[2025-06-28 18:44:04.706] [info]  [ArtistService] [getArtists] Finished splitting artists. Time required: 1 ms
+[2025-06-28 18:44:04.758] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 2 ms
+[2025-06-28 18:44:04.812] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 4 ms
+[2025-06-28 18:44:05.039] [info]  [ArtistSorter] [sortAscending] Finished sorting artists ascending. Time required: 0 ms
+[2025-06-28 18:44:05.040] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 1 ms
+[2025-06-28 18:44:05.041] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-06-28 18:44:05.041] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-06-28 18:44:05.043] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 1 ms
+[2025-06-28 18:44:05.043] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:44:07.396] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-06-28 18:44:08.277] [info]  [Queue] [setTracks] Set '4' tracks. Shuffle=false
+[2025-06-28 18:44:08.278] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/!Beastie Boys/I'll Communication/Beastie Boys - Sure Shot.mp3'
+[2025-06-28 18:44:08.283] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:44:09.281] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:44:09.283] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:44:10.283] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 18:44:16.989] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-06-28 18:44:29.390] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-06-28 18:47:49.985] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-06-28 18:47:50.598] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-06-28 18:47:51.612] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-06-28 18:48:03.997] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-06-28 18:48:03.998] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-06-28 18:48:03.999] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:48:04.000] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-06-28 18:48:04.001] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:48:04.549] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 2 ms
+[2025-06-28 18:48:04.550] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-06-28 18:48:04.551] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-06-28 18:48:04.604] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 4 ms
+[2025-06-28 18:48:04.607] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 1 ms
+[2025-06-28 18:48:04.608] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 2 ms
+[2025-06-28 18:48:14.602] [info]  [ArtistSorter] [sortAscending] Finished sorting artists ascending. Time required: 0 ms
+[2025-06-28 18:48:14.603] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 2 ms
+[2025-06-28 18:48:14.604] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-06-28 18:48:14.604] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-06-28 18:48:14.605] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:48:14.606] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-06-28 18:48:14.606] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 0 ms
+[2025-06-28 18:48:15.139] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-06-28 18:48:15.140] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-06-28 18:48:15.140] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 0 ms
+[2025-06-28 18:48:15.141] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-06-28 18:48:15.141] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 0 ms
+[2025-06-28 18:48:15.206] [info]  [ArtistService] [getArtists] Finished getting artists. Time required: 2 ms
+[2025-06-28 18:48:15.208] [info]  [ArtistService] [getArtists] Finished splitting artists. Time required: 1 ms
+[2025-06-28 18:48:15.260] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 2 ms
+[2025-06-28 18:48:15.315] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 4 ms
+[2025-06-28 18:48:15.691] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 2 ms
+[2025-06-28 18:48:15.692] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 1 ms
+[2025-06-28 18:48:15.692] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-06-28 18:48:15.745] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 4 ms
+[2025-06-28 18:48:15.747] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 1 ms
+[2025-06-28 18:48:15.748] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 2 ms
+[2025-06-28 18:48:18.341] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-06-28 18:48:18.342] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-06-28 18:48:18.343] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:48:18.343] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-06-28 18:48:18.344] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:48:18.893] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 2 ms
+[2025-06-28 18:48:18.894] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-06-28 18:48:18.895] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-06-28 18:48:18.947] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 3 ms
+[2025-06-28 18:48:18.949] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 1 ms
+[2025-06-28 18:48:18.950] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 2 ms
+[2025-06-28 18:48:22.748] [info]  [IndexingService] [indexCollection] Indexing collection.
+[2025-06-28 18:48:22.926] [info]  [Indexer] [indexCollectionAlwaysAsync] Indexing collection.
+[2025-06-28 18:48:22.928] [info]  [TrackIndexer] [indexTracksAsync] +++ STARTED INDEXING TRACKS +++
+[2025-06-28 18:48:22.931] [info]  [TrackRemover] [removeTracksThatDoNoNotBelongToFoldersAsync] There are no tracks to remove. Time required: 3 ms
+[2025-06-28 18:48:22.933] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Found 211 tracks.
+[2025-06-28 18:48:22.935] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Removed 0 tracks. Time required: 4 ms
+[2025-06-28 18:48:22.936] [info]  [TrackRemover] [removeFolderTracksForInexistingTracksAsync] There are no folder tracks to remove. Time required: 0 ms
+[2025-06-28 18:48:22.944] [info]  [TrackUpdater] [updateTracksThatAreOutOfDateAsync] Updated tracks: 0. Time required: 8 ms
+[2025-06-28 18:48:23.244] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 1 tracks
+[2025-06-28 18:48:24.965] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 90 tracks
+[2025-06-28 18:48:26.729] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 182 tracks
+[2025-06-28 18:48:30.216] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 274 tracks
+[2025-06-28 18:48:33.097] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 366 tracks
+[2025-06-28 18:48:37.582] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 458 tracks
+[2025-06-28 18:48:37.645] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Added tracks: 460. Time required: 14701 ms
+[2025-06-28 18:48:37.645] [info]  [TrackIndexer] [indexTracksAsync] +++ FINISHED INDEXING TRACKS (Time required: 14717 ms) +++
+[2025-06-28 18:48:37.655] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ STARTED INDEXING ALBUM ARTWORK +++
+[2025-06-28 18:48:37.658] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] There is no album artwork to remove. Time required: 2 ms.
+[2025-06-28 18:48:37.660] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 1 album artwork.
+[2025-06-28 18:48:37.670] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Removed 1 album artwork. Time required: 12 ms.
+[2025-06-28 18:48:37.674] [info]  [AlbumArtworkAdder] [addAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 45 album data that needs indexing
+[2025-06-28 18:48:42.526] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 64 album artwork in the database
+[2025-06-28 18:48:42.527] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 64 artworkIds in the database
+[2025-06-28 18:48:42.528] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 65 artwork files on disk
+[2025-06-28 18:48:42.532] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ FINISHED INDEXING ALBUM ARTWORK (Time required: 4876 ms) +++
+[2025-06-28 18:48:51.137] [info]  [IndexingService] [indexCollection] Indexing collection.
+[2025-06-28 18:48:51.317] [info]  [Indexer] [indexCollectionAlwaysAsync] Indexing collection.
+[2025-06-28 18:48:51.318] [info]  [TrackIndexer] [indexTracksAsync] +++ STARTED INDEXING TRACKS +++
+[2025-06-28 18:48:51.322] [info]  [TrackRemover] [removeTracksThatDoNoNotBelongToFoldersAsync] There are no tracks to remove. Time required: 3 ms
+[2025-06-28 18:48:51.330] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Found 671 tracks.
+[2025-06-28 18:48:51.334] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Removed 0 tracks. Time required: 12 ms
+[2025-06-28 18:48:51.335] [info]  [TrackRemover] [removeFolderTracksForInexistingTracksAsync] There are no folder tracks to remove. Time required: 0 ms
+[2025-06-28 18:48:51.352] [info]  [TrackUpdater] [updateTracksThatAreOutOfDateAsync] Updated tracks: 0. Time required: 16 ms
+[2025-06-28 18:48:51.935] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 12 tracks
+[2025-06-28 18:48:52.238] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 24 tracks
+[2025-06-28 18:48:53.946] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 36 tracks
+[2025-06-28 18:48:54.201] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 48 tracks
+[2025-06-28 18:48:54.483] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 60 tracks
+[2025-06-28 18:48:54.483] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Added tracks: 60. Time required: 3130 ms
+[2025-06-28 18:48:54.483] [info]  [TrackIndexer] [indexTracksAsync] +++ FINISHED INDEXING TRACKS (Time required: 3164 ms) +++
+[2025-06-28 18:48:54.501] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ STARTED INDEXING ALBUM ARTWORK +++
+[2025-06-28 18:48:54.503] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] There is no album artwork to remove. Time required: 2 ms.
+[2025-06-28 18:48:54.505] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 1 album artwork.
+[2025-06-28 18:48:54.643] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Removed 1 album artwork. Time required: 139 ms.
+[2025-06-28 18:48:54.645] [info]  [AlbumArtworkAdder] [addAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 2 album data that needs indexing
+[2025-06-28 18:48:55.180] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 65 album artwork in the database
+[2025-06-28 18:48:55.181] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 65 artworkIds in the database
+[2025-06-28 18:48:55.183] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 66 artwork files on disk
+[2025-06-28 18:48:55.186] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ FINISHED INDEXING ALBUM ARTWORK (Time required: 685 ms) +++
+[2025-06-28 18:49:18.042] [info]  [PlaybackService] [playbackFinishedHandler] Track finished: '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:49:18.052] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 18:49:19.047] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:49:19.049] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:49:20.053] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Real Muthaphuckkin G's.mp3'
+[2025-06-28 18:49:20.644] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-06-28 18:49:20.645] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-06-28 18:49:20.646] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:49:20.647] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-06-28 18:49:20.648] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-06-28 18:49:21.197] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 3 ms
+[2025-06-28 18:49:21.199] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-06-28 18:49:21.200] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 2 ms
+[2025-06-28 18:49:21.261] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 13 ms
+[2025-06-28 18:49:21.267] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 5 ms
+[2025-06-28 18:49:21.268] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 6 ms
+[2025-06-28 18:49:23.900] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-06-28 18:49:44.879] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-06-28 18:50:22.101] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 18:50:22.112] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Real Muthaphuckkin G's.mp3'
+[2025-06-28 18:50:23.106] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:50:23.107] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:50:23.122] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Real Muthaphuckkin G's.mp3'
+[2025-06-28 18:50:23.134] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - It's On.mp3'
+[2025-06-28 18:50:24.113] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - It's On.mp3'
+[2025-06-28 18:50:24.125] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:50:24.126] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:50:24.289] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - It's On.mp3'
+[2025-06-28 18:50:24.301] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Real Muthaphuckkin G's.mp3'
+[2025-06-28 18:50:25.293] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:50:25.295] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:50:26.302] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - It's On.mp3'
+[2025-06-28 18:52:03.472] [info]  [Queue] [setTracks] Set '14' tracks. Shuffle=false
+[2025-06-28 18:52:03.473] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Real Muthaphuckkin G's.mp3'
+[2025-06-28 18:52:03.483] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:52:04.477] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:52:04.478] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:52:05.488] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 18:52:10.128] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:52:10.131] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 18:56:27.243] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 18:56:28.244] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 18:56:28.245] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:38:53.236] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 19:38:54.236] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:38:54.238] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:38:54.571] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 19:38:55.571] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:38:55.572] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:39:11.586] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 19:39:12.586] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:39:12.587] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:39:14.772] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 19:39:15.040] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 19:39:15.543] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 19:39:16.543] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:39:16.544] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:39:16.587] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 19:39:17.587] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:39:17.588] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:40:03.207] [info]  [PlaybackService] [playbackFinishedHandler] Track finished: '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Any Last Werdz.mp3'
+[2025-06-28 19:40:03.223] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:40:04.214] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:40:04.215] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:40:05.225] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Real Muthaphuckkin G's.mp3'
+[2025-06-28 19:41:38.686] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:41:39.686] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:41:39.688] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:41:40.417] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:41:41.418] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:41:41.419] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:41:46.794] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:41:47.794] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:41:47.795] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:41:49.677] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:41:50.254] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:41:51.255] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:41:51.256] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:41:51.627] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:41:52.253] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:41:52.725] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:41:53.726] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:41:53.727] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:42:03.383] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:42:04.325] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:42:05.073] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:42:05.597] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:42:06.597] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:42:06.598] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:44:04.404] [info]  [PlaybackService] [playbackFinishedHandler] Track finished: '/home/spicysteve/Music/!Eazy E/Eazy-duz-it/Eazy-E - No More Question's.mp3'
+[2025-06-28 19:44:04.426] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Real Muthaphuckkin G's.mp3'
+[2025-06-28 19:44:05.411] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:44:05.412] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-06-28 19:44:06.428] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!N.W.A/Straight Outta Compton/N.W.A. - Fuck Tha Police.mp3'
+[2025-06-28 19:46:55.057] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Eazy E/It's On (Dr. Dre) 187um Killa/Eazy-E - Real Muthaphuckkin G's.mp3'
+[2025-06-28 19:46:56.063] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-06-28 19:46:56.064] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 17:49:13.575] [info]  [Main] [Main] +++ Starting +++
+[2025-07-31 17:49:15.371] [info]  [AppComponent] [ngOnInit] +++ Started Dopamine 3.0.0-preview.39 +++
+[2025-07-31 17:49:15.418] [info]  [AppearanceService] [applyTheme] Applied theme name=Naughty' and theme classes='default-theme-dark'
+[2025-07-31 17:49:15.436] [info]  [QueuePersister] [restore] Restoring queue
+[2025-07-31 17:49:15.483] [info]  [QueuePersister] [restore] Restored queue of 2 tracks. Time required: 1 ms
+[2025-07-31 17:49:15.484] [info]  [Queue] [restoreTracks] Restored '2' tracks
+[2025-07-31 17:49:15.502] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Beastie Boys/I'll Communication/Beastie Boys - Sure Shot.mp3'
+[2025-07-31 17:49:15.503] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!Beastie Boys/I'll Communication/Beastie Boys - Sure Shot.mp3'
+[2025-07-31 17:49:15.526] [info]  [DatabaseMigrator] [migrateAsync] The database is up to date. No migrations to perform.
+[2025-07-31 17:49:15.529] [info]  [FileService] [getAllParameters] Parameters: /tmp/.mount_dopamiHJDNXi/dopamine, --no-sandbox
+[2025-07-31 17:49:15.530] [info]  [FileService] [getAllParameters] File queue: 
+[2025-07-31 17:49:15.531] [info]  [FileService] [hasPlayableFilesAsGivenParameters] Found parameters: /tmp/.mount_dopamiHJDNXi/dopamine, --no-sandbox
+[2025-07-31 17:49:16.325] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 15 ms
+[2025-07-31 17:49:16.645] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 17:49:16.650] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 17:49:17.506] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!Beastie Boys/To The 5 Boroughs/Beastie Boys - Ch-Check It Out.mp3'
+[2025-07-31 17:49:17.559] [info]  [IndexingService] [indexCollection] Indexing collection.
+[2025-07-31 17:49:17.560] [info]  [UpdateService] [checkForUpdatesAsync] Checking for updates
+[2025-07-31 17:49:18.299] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Indexing collection.
+[2025-07-31 17:49:18.376] [info]  [CollectionChecker] [isCollectionOutdatedAsync] Collection is outdated: tracksNeedIndexing=false, numberOfTracksHasChanged=true, lastDateModifiedHasChanged=true
+[2025-07-31 17:49:18.377] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Collection is outdated.
+[2025-07-31 17:49:18.377] [info]  [TrackIndexer] [indexTracksAsync] +++ STARTED INDEXING TRACKS +++
+[2025-07-31 17:49:18.378] [info]  [TrackRemover] [removeTracksThatDoNoNotBelongToFoldersAsync] There are no tracks to remove. Time required: 0 ms
+[2025-07-31 17:49:18.386] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Found 731 tracks.
+[2025-07-31 17:49:18.391] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Removed 0 tracks. Time required: 12 ms
+[2025-07-31 17:49:18.392] [info]  [TrackRemover] [removeFolderTracksForInexistingTracksAsync] There are no folder tracks to remove. Time required: 1 ms
+[2025-07-31 17:49:18.411] [info]  [TrackUpdater] [updateTracksThatAreOutOfDateAsync] Updated tracks: 0. Time required: 19 ms
+[2025-07-31 17:49:18.524] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 1 tracks
+[2025-07-31 17:49:19.067] [info]  [UpdateService] [checkForUpdatesAsync] Current=3.0.0-preview.39, Latest=3.0.0-preview.39-fix-776
+[2025-07-31 17:49:19.068] [info]  [UpdateService] [checkForUpdatesAsync] Latest (3.0.0-preview.39-fix-776) <= Current (3.0.0-preview.39). Nothing to do.
+[2025-07-31 17:49:23.041] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 156 tracks
+[2025-07-31 17:49:27.050] [info]  [ArtistSorter] [sortAscending] Finished sorting artists ascending. Time required: 0 ms
+[2025-07-31 17:49:27.051] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 1 ms
+[2025-07-31 17:49:27.052] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-07-31 17:49:27.052] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-07-31 17:49:27.053] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-07-31 17:49:27.053] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-07-31 17:49:27.054] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-07-31 17:49:27.410] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-07-31 17:49:27.411] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-07-31 17:49:27.412] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-07-31 17:49:27.413] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-07-31 17:49:27.413] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 0 ms
+[2025-07-31 17:49:27.621] [info]  [ArtistService] [getArtists] Finished getting artists. Time required: 21 ms
+[2025-07-31 17:49:27.625] [info]  [ArtistService] [getArtists] Finished splitting artists. Time required: 3 ms
+[2025-07-31 17:49:27.681] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 5 ms
+[2025-07-31 17:49:27.963] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 315 tracks
+[2025-07-31 17:49:27.983] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 250 ms
+[2025-07-31 17:49:28.042] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 5 ms
+[2025-07-31 17:49:28.045] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 1 ms
+[2025-07-31 17:49:28.046] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 3 ms
+[2025-07-31 17:49:28.449] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 356 ms
+[2025-07-31 17:49:28.458] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 7 ms
+[2025-07-31 17:49:28.460] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 9 ms
+[2025-07-31 17:49:28.654] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-07-31 17:49:28.656] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 2 ms
+[2025-07-31 17:49:35.260] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 474 tracks
+[2025-07-31 17:49:39.467] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-07-31 17:49:39.467] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2025-07-31 17:49:39.468] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-07-31 17:49:39.468] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-07-31 17:49:39.469] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-07-31 17:49:40.039] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 22 ms
+[2025-07-31 17:49:40.041] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-07-31 17:49:40.042] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-07-31 17:49:40.086] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 633 tracks
+[2025-07-31 17:49:40.130] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 37 ms
+[2025-07-31 17:49:40.135] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 4 ms
+[2025-07-31 17:49:40.136] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 5 ms
+[2025-07-31 17:49:46.336] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 792 tracks
+[2025-07-31 17:49:46.411] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Added tracks: 795. Time required: 27999 ms
+[2025-07-31 17:49:46.412] [info]  [TrackIndexer] [indexTracksAsync] +++ FINISHED INDEXING TRACKS (Time required: 28035 ms) +++
+[2025-07-31 17:49:46.419] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ STARTED INDEXING ALBUM ARTWORK +++
+[2025-07-31 17:49:46.423] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] There is no album artwork to remove. Time required: 3 ms.
+[2025-07-31 17:49:46.426] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 4 album artwork.
+[2025-07-31 17:49:46.437] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Removed 4 album artwork. Time required: 13 ms.
+[2025-07-31 17:49:46.442] [info]  [AlbumArtworkAdder] [addAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 96 album data that needs indexing
+[2025-07-31 17:49:49.419] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 2 ms
+[2025-07-31 17:49:49.420] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-07-31 17:49:49.421] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-07-31 17:49:49.475] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 2 ms
+[2025-07-31 17:49:49.477] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 1 ms
+[2025-07-31 17:49:49.478] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 2 ms
+[2025-07-31 17:49:49.515] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 2 ms
+[2025-07-31 17:49:49.515] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-07-31 17:49:49.516] [info]  [Queue] [setTracks] Set '24' tracks. Shuffle=false
+[2025-07-31 17:49:49.517] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/!Beastie Boys/I'll Communication/Beastie Boys - Sure Shot.mp3'
+[2025-07-31 17:49:49.532] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Ambitionz Az A Ridah.mp3'
+[2025-07-31 17:49:50.533] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 17:49:50.535] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 17:49:51.733] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Yaki Kadafi, Snoop Dogg, Nate Dogg, Fatal - All About U (ft. Nate Dogg, Snoop Dogg, Fatal, Yani Hadati).mp3'
+[2025-07-31 17:49:56.561] [info]  [PlaybackService] [toggleIsShuffled] Toggled isShuffled from false to true
+[2025-07-31 17:49:57.041] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 156 album artwork in the database
+[2025-07-31 17:49:57.042] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 156 artworkIds in the database
+[2025-07-31 17:49:57.050] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 160 artwork files on disk
+[2025-07-31 17:49:57.053] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ FINISHED INDEXING ALBUM ARTWORK (Time required: 10633 ms) +++
+[2025-07-31 17:49:57.610] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 6 ms
+[2025-07-31 17:49:57.612] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-07-31 17:49:57.613] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-07-31 17:49:57.681] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 2 ms
+[2025-07-31 17:49:57.695] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-07-31 17:49:57.696] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-07-31 17:52:55.756] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Ambitionz Az A Ridah.mp3'
+[2025-07-31 17:52:55.775] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Check Out Time.mp3'
+[2025-07-31 17:52:56.772] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 17:52:56.773] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 17:52:57.777] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, E-40, Richie Rich, B-Legit, C-Bo - Ain't Hard 2 Find (ft. B-Legit, C-BO, E-40, Richie Rich).mp3'
+[2025-07-31 17:55:10.102] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Check Out Time.mp3'
+[2025-07-31 17:55:10.142] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, E-40, Richie Rich, B-Legit, C-Bo - Ain't Hard 2 Find (ft. B-Legit, C-BO, E-40, Richie Rich).mp3'
+[2025-07-31 17:55:11.140] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 17:55:11.142] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 17:55:12.143] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - No More Pain.mp3'
+[2025-07-31 17:56:19.183] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, E-40, Richie Rich, B-Legit, C-Bo - Ain't Hard 2 Find (ft. B-Legit, C-BO, E-40, Richie Rich).mp3'
+[2025-07-31 17:56:19.203] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - No More Pain.mp3'
+[2025-07-31 17:56:20.199] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 17:56:20.201] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 17:56:21.204] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Rappin' 4-Tay - Only God Can Judge Me (ft. Rappin' 4-Tay).mp3'
+[2025-07-31 17:56:21.393] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - No More Pain.mp3'
+[2025-07-31 17:56:22.393] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 17:56:22.395] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 17:57:41.995] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - No More Pain.mp3'
+[2025-07-31 17:57:42.996] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 17:57:42.998] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 17:59:36.030] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - No More Pain.mp3'
+[2025-07-31 17:59:37.038] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 17:59:37.040] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:00:38.860] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - No More Pain.mp3'
+[2025-07-31 18:00:39.865] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:00:39.866] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:00:41.703] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - No More Pain.mp3'
+[2025-07-31 18:00:42.709] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:00:42.712] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:00:54.757] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - No More Pain.mp3'
+[2025-07-31 18:00:55.759] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:00:55.762] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:03:20.506] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - No More Pain.mp3'
+[2025-07-31 18:03:20.525] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Rappin' 4-Tay - Only God Can Judge Me (ft. Rappin' 4-Tay).mp3'
+[2025-07-31 18:03:21.522] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:03:21.524] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:03:22.529] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Danny Boy - I Ain't Mad At Cha (ft. Danny Boy).mp3'
+[2025-07-31 18:06:16.933] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Rappin' 4-Tay - Only God Can Judge Me (ft. Rappin' 4-Tay).mp3'
+[2025-07-31 18:06:16.943] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Danny Boy - I Ain't Mad At Cha (ft. Danny Boy).mp3'
+[2025-07-31 18:06:17.939] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:06:17.941] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:06:18.954] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Holla At Me.mp3'
+[2025-07-31 18:10:39.444] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Danny Boy - I Ain't Mad At Cha (ft. Danny Boy).mp3'
+[2025-07-31 18:10:39.456] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Holla At Me.mp3'
+[2025-07-31 18:10:40.460] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:10:40.461] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:10:41.458] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Outlaw Immortals - When We Ride (ft. Outlaw Immortals).mp3'
+[2025-07-31 18:13:31.391] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Holla At Me.mp3'
+[2025-07-31 18:13:31.402] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Outlaw Immortals - When We Ride (ft. Outlaw Immortals).mp3'
+[2025-07-31 18:13:32.407] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:13:32.408] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:13:33.404] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Storm, Mutah, Michel'le - Run Tha Streetz (ft. Michel'le, Storm, Mutah).mp3'
+[2025-07-31 18:18:19.024] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Outlaw Immortals - When We Ride (ft. Outlaw Immortals).mp3'
+[2025-07-31 18:18:20.028] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:18:20.029] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:20:01.600] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Outlaw Immortals - When We Ride (ft. Outlaw Immortals).mp3'
+[2025-07-31 18:20:02.601] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:20:02.603] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:20:23.655] [info]  [PlaybackService] [playbackFinishedHandler] Track finished: '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Outlaw Immortals - When We Ride (ft. Outlaw Immortals).mp3'
+[2025-07-31 18:20:23.673] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Storm, Mutah, Michel'le - Run Tha Streetz (ft. Michel'le, Storm, Mutah).mp3'
+[2025-07-31 18:20:24.677] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:20:24.678] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:20:25.675] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke - All Eyez On Me (ft. Big Syke).mp3'
+[2025-07-31 18:25:40.099] [info]  [PlaybackService] [playbackFinishedHandler] Track finished: '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Storm, Mutah, Michel'le - Run Tha Streetz (ft. Michel'le, Storm, Mutah).mp3'
+[2025-07-31 18:25:40.119] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke - All Eyez On Me (ft. Big Syke).mp3'
+[2025-07-31 18:25:41.116] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:25:41.117] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:25:42.126] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Jewell, Storm, Outlawz - Thug Passion (ft. Jewell, Outlawz, The Storm).mp3'
+[2025-07-31 18:26:10.133] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke - All Eyez On Me (ft. Big Syke).mp3'
+[2025-07-31 18:26:10.141] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke - All Eyez On Me (ft. Big Syke).mp3'
+[2025-07-31 18:26:11.158] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:26:11.159] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:26:12.143] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Jewell, Storm, Outlawz - Thug Passion (ft. Jewell, Outlawz, The Storm).mp3'
+[2025-07-31 18:26:12.177] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke - All Eyez On Me (ft. Big Syke).mp3'
+[2025-07-31 18:26:12.184] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Storm, Mutah, Michel'le - Run Tha Streetz (ft. Michel'le, Storm, Mutah).mp3'
+[2025-07-31 18:26:13.184] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:26:13.186] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:26:14.186] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke - All Eyez On Me (ft. Big Syke).mp3'
+[2025-07-31 18:31:28.591] [info]  [PlaybackService] [playbackFinishedHandler] Track finished: '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Storm, Mutah, Michel'le - Run Tha Streetz (ft. Michel'le, Storm, Mutah).mp3'
+[2025-07-31 18:31:28.610] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke - All Eyez On Me (ft. Big Syke).mp3'
+[2025-07-31 18:31:29.608] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:31:29.610] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:31:30.612] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Jewell, Storm, Outlawz - Thug Passion (ft. Jewell, Outlawz, The Storm).mp3'
+[2025-07-31 18:34:58.883] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke - All Eyez On Me (ft. Big Syke).mp3'
+[2025-07-31 18:34:58.892] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Jewell, Storm, Outlawz - Thug Passion (ft. Jewell, Outlawz, The Storm).mp3'
+[2025-07-31 18:34:59.894] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:34:59.896] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:35:00.895] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Richie Rich - Ratha Be Ya Nigga (ft. Richie Rich).mp3'
+[2025-07-31 18:40:06.600] [info]  [PlaybackService] [playbackFinishedHandler] Track finished: '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Jewell, Storm, Outlawz - Thug Passion (ft. Jewell, Outlawz, The Storm).mp3'
+[2025-07-31 18:40:06.621] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Richie Rich - Ratha Be Ya Nigga (ft. Richie Rich).mp3'
+[2025-07-31 18:40:07.619] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:40:07.621] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:40:08.628] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke, C-PO, Danny Boy - Picture Me Rollin' (ft. Danny Boy, CPO, Big Syke).mp3'
+[2025-07-31 18:42:47.257] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Richie Rich - Ratha Be Ya Nigga (ft. Richie Rich).mp3'
+[2025-07-31 18:42:47.267] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke, C-PO, Danny Boy - Picture Me Rollin' (ft. Danny Boy, CPO, Big Syke).mp3'
+[2025-07-31 18:42:48.271] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:42:48.272] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:42:49.271] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Heaven Ain't Hard 2 Find.mp3'
+[2025-07-31 18:46:42.388] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke, C-PO, Danny Boy - Picture Me Rollin' (ft. Danny Boy, CPO, Big Syke).mp3'
+[2025-07-31 18:46:42.399] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Heaven Ain't Hard 2 Find.mp3'
+[2025-07-31 18:46:43.406] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:46:43.408] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:46:44.401] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Heartz Of Men.mp3'
+[2025-07-31 18:49:29.203] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Heaven Ain't Hard 2 Find.mp3'
+[2025-07-31 18:49:29.212] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Heartz Of Men.mp3'
+[2025-07-31 18:49:30.210] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:49:30.212] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:49:31.216] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Dr. Dre, Roger - California Love (remix) (ft. Dr. Dre, Roger Troutman) - Remix.mp3'
+[2025-07-31 18:49:31.934] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:49:31.936] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:49:34.150] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Heartz Of Men.mp3'
+[2025-07-31 18:49:34.159] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Dr. Dre, Roger - California Love (remix) (ft. Dr. Dre, Roger Troutman) - Remix.mp3'
+[2025-07-31 18:49:36.007] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:49:36.009] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:49:36.164] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Wonda Why They Call U Bytch.mp3'
+[2025-07-31 18:49:38.551] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Dr. Dre, Roger - California Love (remix) (ft. Dr. Dre, Roger Troutman) - Remix.mp3'
+[2025-07-31 18:49:38.561] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Wonda Why They Call U Bytch.mp3'
+[2025-07-31 18:49:40.182] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:49:40.183] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:49:40.566] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Shorty Wanna Be A Thug.mp3'
+[2025-07-31 18:49:42.668] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:49:42.669] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:49:42.955] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Wonda Why They Call U Bytch.mp3'
+[2025-07-31 18:49:42.967] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Shorty Wanna Be A Thug.mp3'
+[2025-07-31 18:49:44.885] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:49:44.887] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:49:47.332] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-07-31 18:49:47.333] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-07-31 18:49:48.211] [info]  [PlaybackService] [stop] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Shorty Wanna Be A Thug.mp3'
+[2025-07-31 18:49:48.212] [warn]  [DiscordApi] [clearPresence] Discord client is not ready. Cannot clear presence.
+[2025-07-31 18:49:49.651] [info]  [QueuePersister] [save] Saving queue
+[2025-07-31 18:49:49.662] [info]  [QueuePersister] [save] Saved queue of 24 tracks
+[2025-07-31 18:49:49.679] [info]  [DiscordApi] [shutdown] Discord client destroyed.
+[2025-08-02 11:11:10.277] [info]  [Main] [Main] +++ Starting +++
+[2025-08-02 11:11:11.904] [info]  [AppComponent] [ngOnInit] +++ Started Dopamine 3.0.0-preview.39 +++
+[2025-08-02 11:11:11.951] [info]  [AppearanceService] [applyTheme] Applied theme name=Naughty' and theme classes='default-theme-dark'
+[2025-08-02 11:11:11.967] [info]  [QueuePersister] [restore] Restoring queue
+[2025-08-02 11:11:12.015] [info]  [QueuePersister] [restore] Restored queue of 24 tracks. Time required: 1 ms
+[2025-08-02 11:11:12.016] [info]  [Queue] [restoreTracks] Restored '24' tracks
+[2025-08-02 11:11:12.017] [info]  [DatabaseMigrator] [migrateAsync] The database is up to date. No migrations to perform.
+[2025-08-02 11:11:12.020] [info]  [FileService] [getAllParameters] Parameters: /tmp/.mount_dopamijrefKO/dopamine, --no-sandbox
+[2025-08-02 11:11:12.021] [info]  [FileService] [getAllParameters] File queue: 
+[2025-08-02 11:11:12.022] [info]  [FileService] [hasPlayableFilesAsGivenParameters] Found parameters: /tmp/.mount_dopamijrefKO/dopamine, --no-sandbox
+[2025-08-02 11:11:12.075] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-08-02 11:11:12.093] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 16 ms
+[2025-08-02 11:11:12.095] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 18 ms
+[2025-08-02 11:11:12.096] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-08-02 11:11:12.097] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-02 11:11:12.636] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 6 ms
+[2025-08-02 11:11:12.639] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 1 ms
+[2025-08-02 11:11:12.640] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 2 ms
+[2025-08-02 11:11:12.721] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 3 ms
+[2025-08-02 11:11:12.723] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 1 ms
+[2025-08-02 11:11:12.723] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-02 11:11:12.953] [info]  [DiscordService] [updatePresence] No currentTrack was found. Not setting Discord Rich Presence.
+[2025-08-02 11:11:14.055] [info]  [IndexingService] [indexCollection] Indexing collection.
+[2025-08-02 11:11:14.057] [info]  [UpdateService] [checkForUpdatesAsync] Checking for updates
+[2025-08-02 11:11:14.309] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Indexing collection.
+[2025-08-02 11:11:14.383] [info]  [CollectionChecker] [isCollectionOutdatedAsync] Collection is up to date
+[2025-08-02 11:11:14.383] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Collection is not outdated.
+[2025-08-02 11:11:14.387] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ STARTED INDEXING ALBUM ARTWORK +++
+[2025-08-02 11:11:14.390] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] There is no album artwork to remove. Time required: 2 ms.
+[2025-08-02 11:11:14.392] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] There is no album artwork to remove. Time required: 1 ms.
+[2025-08-02 11:11:14.395] [info]  [AlbumArtworkAdder] [addAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 1 album data that needs indexing
+[2025-08-02 11:11:14.414] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 156 album artwork in the database
+[2025-08-02 11:11:14.415] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 156 artworkIds in the database
+[2025-08-02 11:11:14.420] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 156 artwork files on disk
+[2025-08-02 11:11:14.422] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ FINISHED INDEXING ALBUM ARTWORK (Time required: 34 ms) +++
+[2025-08-02 11:11:14.699] [info]  [UpdateService] [checkForUpdatesAsync] Current=3.0.0-preview.39, Latest=3.0.0-preview.39-fix-776
+[2025-08-02 11:11:14.700] [info]  [UpdateService] [checkForUpdatesAsync] Latest (3.0.0-preview.39-fix-776) <= Current (3.0.0-preview.39). Nothing to do.
+[2025-08-02 11:11:14.984] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 5 ms
+[2025-08-02 11:11:14.994] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-08-02 11:11:14.995] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-08-02 11:11:15.076] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 3 ms
+[2025-08-02 11:11:15.078] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-08-02 11:11:15.079] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:16:05.434] [info]  [Main] [Main] +++ Starting +++
+[2025-08-06 18:16:07.182] [info]  [AppComponent] [ngOnInit] +++ Started Dopamine 3.0.0-preview.39 +++
+[2025-08-06 18:16:07.232] [info]  [AppearanceService] [applyTheme] Applied theme name=Naughty' and theme classes='default-theme-dark'
+[2025-08-06 18:16:07.249] [info]  [QueuePersister] [restore] Restoring queue
+[2025-08-06 18:16:07.307] [info]  [QueuePersister] [restore] Restored queue of 24 tracks. Time required: 1 ms
+[2025-08-06 18:16:07.309] [info]  [Queue] [restoreTracks] Restored '24' tracks
+[2025-08-06 18:16:07.310] [info]  [DatabaseMigrator] [migrateAsync] The database is up to date. No migrations to perform.
+[2025-08-06 18:16:07.313] [info]  [FileService] [getAllParameters] Parameters: /tmp/.mount_dopamiI9WwaN/dopamine, --no-sandbox
+[2025-08-06 18:16:07.315] [info]  [FileService] [getAllParameters] File queue: 
+[2025-08-06 18:16:07.316] [info]  [FileService] [hasPlayableFilesAsGivenParameters] Found parameters: /tmp/.mount_dopamiI9WwaN/dopamine, --no-sandbox
+[2025-08-06 18:16:07.355] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-08-06 18:16:07.374] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 17 ms
+[2025-08-06 18:16:07.375] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 18 ms
+[2025-08-06 18:16:07.376] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-08-06 18:16:07.377] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:16:07.936] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 7 ms
+[2025-08-06 18:16:07.940] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 2 ms
+[2025-08-06 18:16:07.942] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 4 ms
+[2025-08-06 18:16:08.045] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 3 ms
+[2025-08-06 18:16:08.048] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-08-06 18:16:08.049] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:16:08.256] [info]  [DiscordService] [updatePresence] No currentTrack was found. Not setting Discord Rich Presence.
+[2025-08-06 18:16:09.340] [info]  [IndexingService] [indexCollection] Indexing collection.
+[2025-08-06 18:16:09.341] [info]  [UpdateService] [checkForUpdatesAsync] Checking for updates
+[2025-08-06 18:16:09.649] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Indexing collection.
+[2025-08-06 18:16:09.736] [info]  [CollectionChecker] [isCollectionOutdatedAsync] Collection is up to date
+[2025-08-06 18:16:09.737] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Collection is not outdated.
+[2025-08-06 18:16:09.747] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ STARTED INDEXING ALBUM ARTWORK +++
+[2025-08-06 18:16:09.752] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] There is no album artwork to remove. Time required: 3 ms.
+[2025-08-06 18:16:09.755] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] There is no album artwork to remove. Time required: 2 ms.
+[2025-08-06 18:16:09.759] [info]  [AlbumArtworkAdder] [addAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 1 album data that needs indexing
+[2025-08-06 18:16:09.778] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 156 album artwork in the database
+[2025-08-06 18:16:09.778] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 156 artworkIds in the database
+[2025-08-06 18:16:09.786] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 156 artwork files on disk
+[2025-08-06 18:16:09.788] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ FINISHED INDEXING ALBUM ARTWORK (Time required: 39 ms) +++
+[2025-08-06 18:16:09.928] [info]  [UpdateService] [checkForUpdatesAsync] Current=3.0.0-preview.39, Latest=3.0.0-preview.39-fix-776
+[2025-08-06 18:16:09.929] [info]  [UpdateService] [checkForUpdatesAsync] Latest (3.0.0-preview.39-fix-776) <= Current (3.0.0-preview.39). Nothing to do.
+[2025-08-06 18:16:10.351] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 5 ms
+[2025-08-06 18:16:10.358] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-08-06 18:16:10.359] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-08-06 18:16:10.446] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 3 ms
+[2025-08-06 18:16:10.448] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-08-06 18:16:10.449] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:16:51.838] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-08-06 18:16:54.777] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 28 ms
+[2025-08-06 18:17:05.842] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-08-06 18:17:05.844] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 1 ms
+[2025-08-06 18:17:05.844] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:17:05.845] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-08-06 18:17:05.846] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:17:06.408] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 5 ms
+[2025-08-06 18:17:06.411] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-08-06 18:17:06.412] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-08-06 18:17:06.479] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 4 ms
+[2025-08-06 18:17:06.481] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 1 ms
+[2025-08-06 18:17:06.482] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:17:10.443] [info]  [QueuePersister] [save] Saving queue
+[2025-08-06 18:17:10.532] [info]  [QueuePersister] [save] Saved queue of 24 tracks
+[2025-08-06 18:17:10.545] [warn]  [DiscordApi] [shutdown] Discord client not found.
+[2025-08-06 18:31:19.789] [info]  [Main] [Main] +++ Starting +++
+[2025-08-06 18:31:21.497] [info]  [AppComponent] [ngOnInit] +++ Started Dopamine 3.0.0-preview.39 +++
+[2025-08-06 18:31:21.549] [info]  [AppearanceService] [applyTheme] Applied theme name=Naughty' and theme classes='default-theme-dark'
+[2025-08-06 18:31:21.566] [info]  [QueuePersister] [restore] Restoring queue
+[2025-08-06 18:31:21.624] [info]  [QueuePersister] [restore] Restored queue of 24 tracks. Time required: 1 ms
+[2025-08-06 18:31:21.625] [info]  [Queue] [restoreTracks] Restored '24' tracks
+[2025-08-06 18:31:21.628] [info]  [DatabaseMigrator] [migrateAsync] The database is up to date. No migrations to perform.
+[2025-08-06 18:31:21.632] [info]  [FileService] [getAllParameters] Parameters: /tmp/.mount_dopamiRwhoOG/dopamine, --no-sandbox
+[2025-08-06 18:31:21.633] [info]  [FileService] [getAllParameters] File queue: 
+[2025-08-06 18:31:21.634] [info]  [FileService] [hasPlayableFilesAsGivenParameters] Found parameters: /tmp/.mount_dopamiRwhoOG/dopamine, --no-sandbox
+[2025-08-06 18:31:21.674] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2025-08-06 18:31:21.693] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 18 ms
+[2025-08-06 18:31:21.694] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 19 ms
+[2025-08-06 18:31:21.695] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-08-06 18:31:21.696] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:31:21.931] [info]  [PlaybackService] [stopAndPlay] Stopping ''
+[2025-08-06 18:31:21.958] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Can't C Me.mp3'
+[2025-08-06 18:31:22.240] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 7 ms
+[2025-08-06 18:31:22.244] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 2 ms
+[2025-08-06 18:31:22.245] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 3 ms
+[2025-08-06 18:31:22.400] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 3 ms
+[2025-08-06 18:31:22.402] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-08-06 18:31:22.403] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:31:22.981] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-08-06 18:31:22.985] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-08-06 18:31:23.695] [info]  [IndexingService] [indexCollection] Indexing collection.
+[2025-08-06 18:31:23.698] [info]  [UpdateService] [checkForUpdatesAsync] Checking for updates
+[2025-08-06 18:31:23.986] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Yaki Kadafi, Snoop Dogg, Nate Dogg, Fatal - All About U (ft. Nate Dogg, Snoop Dogg, Fatal, Yani Hadati).mp3'
+[2025-08-06 18:31:24.019] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Indexing collection.
+[2025-08-06 18:31:24.106] [info]  [CollectionChecker] [isCollectionOutdatedAsync] Collection is outdated: tracksNeedIndexing=false, numberOfTracksHasChanged=true, lastDateModifiedHasChanged=true
+[2025-08-06 18:31:24.107] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Collection is outdated.
+[2025-08-06 18:31:24.108] [info]  [TrackIndexer] [indexTracksAsync] +++ STARTED INDEXING TRACKS +++
+[2025-08-06 18:31:24.109] [info]  [TrackRemover] [removeTracksThatDoNoNotBelongToFoldersAsync] There are no tracks to remove. Time required: 0 ms
+[2025-08-06 18:31:24.132] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Found 1526 tracks.
+[2025-08-06 18:31:24.349] [info]  [TrackRemover] [removeTracksThatAreNotFoundOnDiskAsync] Removed 25 tracks. Time required: 239 ms
+[2025-08-06 18:31:24.350] [info]  [UpdateService] [checkForUpdatesAsync] Current=3.0.0-preview.39, Latest=3.0.0-preview.39-fix-776
+[2025-08-06 18:31:24.351] [info]  [TrackRemover] [removeFolderTracksForInexistingTracksAsync] Found 25 folder tracks to remove.
+[2025-08-06 18:31:24.352] [info]  [UpdateService] [checkForUpdatesAsync] Latest (3.0.0-preview.39-fix-776) <= Current (3.0.0-preview.39). Nothing to do.
+[2025-08-06 18:31:24.361] [info]  [TrackRemover] [removeFolderTracksForInexistingTracksAsync] Removed 25 folder tracks. Time required: 11 ms
+[2025-08-06 18:31:24.633] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Can't C Me.mp3'
+[2025-08-06 18:31:25.111] [info]  [TrackUpdater] [updateTracksThatAreOutOfDateAsync] Processed 1495 tracks
+[2025-08-06 18:31:25.141] [info]  [TrackUpdater] [updateTracksThatAreOutOfDateAsync] Updated tracks: 47. Time required: 779 ms
+[2025-08-06 18:31:25.648] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-08-06 18:31:25.649] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-08-06 18:31:25.717] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 21 tracks
+[2025-08-06 18:31:25.952] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 32 tracks
+[2025-08-06 18:31:26.398] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Processed 53 tracks
+[2025-08-06 18:31:26.398] [info]  [TrackAdder] [addTracksThatAreNotInTheDatabaseAsync] Added tracks: 53. Time required: 1256 ms
+[2025-08-06 18:31:26.398] [info]  [TrackIndexer] [indexTracksAsync] +++ FINISHED INDEXING TRACKS (Time required: 2290 ms) +++
+[2025-08-06 18:31:26.456] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ STARTED INDEXING ALBUM ARTWORK +++
+[2025-08-06 18:31:26.461] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] Found 3 album artwork.
+[2025-08-06 18:31:26.566] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] Removed 3 album artwork. Time required: 108 ms.
+[2025-08-06 18:31:26.570] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 2 album artwork.
+[2025-08-06 18:31:26.662] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Removed 2 album artwork. Time required: 94 ms.
+[2025-08-06 18:31:26.668] [info]  [AlbumArtworkAdder] [addAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found 8 album data that needs indexing
+[2025-08-06 18:31:27.791] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 158 album artwork in the database
+[2025-08-06 18:31:27.792] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 158 artworkIds in the database
+[2025-08-06 18:31:27.818] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 163 artwork files on disk
+[2025-08-06 18:31:27.828] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ FINISHED INDEXING ALBUM ARTWORK (Time required: 1370 ms) +++
+[2025-08-06 18:31:28.421] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 5 ms
+[2025-08-06 18:31:28.425] [info]  [AlbumSorter] [sortByAlbumTitleAscending] Finished sorting albums by title ascending. Time required: 0 ms
+[2025-08-06 18:31:28.426] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2025-08-06 18:31:28.516] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 3 ms
+[2025-08-06 18:31:28.519] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 1 ms
+[2025-08-06 18:31:28.520] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 2 ms
+[2025-08-06 18:31:57.484] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 3 ms
+[2025-08-06 18:31:57.486] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-08-06 18:31:57.487] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:33:25.179] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 3 ms
+[2025-08-06 18:33:25.181] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-08-06 18:33:25.182] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:33:25.897] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 4 ms
+[2025-08-06 18:33:25.899] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 1 ms
+[2025-08-06 18:33:25.899] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:33:27.058] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 3 ms
+[2025-08-06 18:33:27.059] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-08-06 18:33:27.060] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:33:34.950] [info]  [TrackService] [getTracksForAlbums] Finished getting tracks for albums. Time required: 4 ms
+[2025-08-06 18:33:34.951] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2025-08-06 18:33:34.952] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2025-08-06 18:33:38.722] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-08-06 18:33:39.517] [info]  [Queue] [setTracks] Set '22' tracks. Shuffle=true
+[2025-08-06 18:33:39.519] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/2Pac/All eyez on me/2Pac - Can't C Me.mp3'
+[2025-08-06 18:33:39.525] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!Dr. Dre & Snoop Dogg/Iz It a Crime/Snoop Dogg - West Up.mp3'
+[2025-08-06 18:33:40.528] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-08-06 18:33:40.530] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-08-06 18:33:41.526] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/The Notorius B.I.G./Life After Death/The Notorious B.I.G. - Hypnotize - 2014 Remaster.mp3'
+[2025-08-06 18:33:42.597] [info]  [Queue] [setTracks] Set '22' tracks. Shuffle=true
+[2025-08-06 18:33:42.599] [info]  [PlaybackService] [stopAndPlay] Stopping '/home/spicysteve/Music/!Dr. Dre & Snoop Dogg/Iz It a Crime/Snoop Dogg - West Up.mp3'
+[2025-08-06 18:33:42.607] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/!N.W.A/Straight Outta Compton/N.W.A. - Fuck Tha Police.mp3'
+[2025-08-06 18:33:43.604] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-08-06 18:33:43.606] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-08-06 18:33:44.608] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke, C-PO, Danny Boy - Picture Me Rollin' (ft. Danny Boy, CPO, Big Syke).mp3'
+[2025-08-06 18:37:03.345] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 27 ms
+[2025-08-06 18:37:10.108] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 29 ms
+[2025-08-06 18:37:13.498] [info]  [PlaylistSorter] [sortAscending] Finished sorting playlists ascending. Time required: 0 ms
+[2025-08-06 18:39:20.133] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/!N.W.A/Straight Outta Compton/N.W.A. - Fuck Tha Police.mp3'
+[2025-08-06 18:39:21.134] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-08-06 18:39:21.136] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-08-06 18:42:31.866] [info]  [PlaybackService] [resume] Resuming '/home/spicysteve/Music/!N.W.A/Straight Outta Compton/N.W.A. - Fuck Tha Police.mp3'
+[2025-08-06 18:42:32.879] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-08-06 18:42:32.881] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-08-06 18:42:40.479] [info]  [PlaybackService] [playbackFinishedHandler] Track finished: '/home/spicysteve/Music/!N.W.A/Straight Outta Compton/N.W.A. - Fuck Tha Police.mp3'
+[2025-08-06 18:42:40.487] [info]  [PlaybackService] [play] Playing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke, C-PO, Danny Boy - Picture Me Rollin' (ft. Danny Boy, CPO, Big Syke).mp3'
+[2025-08-06 18:42:41.495] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-08-06 18:42:41.497] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
+[2025-08-06 18:42:42.500] [info]  [PlaybackService] [preloadNextTrackAfterDelay] Preloaded '/home/spicysteve/Music/!Ice Cube/Greatest Hits/Ice Cube - The Nigga Ya Love To Hate.mp3'
+[2025-08-06 18:45:28.770] [info]  [PlaybackService] [pause] Pausing '/home/spicysteve/Music/2Pac/All eyez on me/2Pac, Big Syke, C-PO, Danny Boy - Picture Me Rollin' (ft. Danny Boy, CPO, Big Syke).mp3'
+[2025-08-06 18:45:29.779] [warn]  [DiscordApi] [setPresence] Discord client is not ready. Attempting reconnect.
+[2025-08-06 18:45:29.780] [error] [DiscordApi] [login] Failed to log into Discord client: Error: Could not connect
