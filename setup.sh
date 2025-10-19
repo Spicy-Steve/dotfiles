@@ -189,7 +189,7 @@ fi
 if [ -d "$DOTFILES_DIR/icons" ]; then
     echo "Installing custom icons..."
     mkdir -p ~/.local/share/fonts/
-    cp -rf "$DOTFILES_DIR/icons/"* ~/.local/share/icons/
+    cp -r "$DOTFILES_DIR/icons/"* ~/.local/share/icons/
     fc-cache -fv
 fi
 
@@ -213,7 +213,8 @@ if [ "$SHELL" != "$(which zsh)" ]; then
 fi
 
 # === Package Installation ===
-read -p "Would you like to install packages? [Y/n]" {appsq,,}
+read -p "Would you like to install packages? [Y/n]" appsq
+appsq=${appsq,,}
 if [ $appsq = "y" ] || [ $appsq = "yes" ] || [ -z $appsq ]; then
     if [ -f /etc/fedora-release ]; then
         $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects ffmpeg-full fastfetch flatpak goverlay mangohud pavucontrol prismlauncher python python-websockets qbittorrent qt6-qtwebsockets-devel speedtest-cli steam vlc vlc-plugins-all
@@ -227,7 +228,8 @@ else
 fi
 
 # === Flatpak Installation ===
-read -p "Would you like to install flatpak && flatpak apps? [Y/n]" {flatpakq,,}
+read -p "Would you like to install flatpak && flatpak apps? [Y/n]" flatpakq
+flatpakq=${flatpakq,,}
 if [ $flatpakq = "y" ] || [ $flatpakq = "yes" ] || [ -z $flatpakq ]; then
     flatpak install com.dec05eba.gpu_screen_recorder com.github.Matoking.protontricks com.github.tchx84.Flatseal com.steamgriddb.SGDBoop com.vysp3r.ProtonPlus io.missioncenter.MissionCenter it.mijorus.gearlever org.localsend.localsend_app
 else
@@ -236,9 +238,10 @@ fi
 
 # === Package Installation (AUR) ===
 if [ -f /etc/arch-release ]; then
-    read -p "Would you like to install AUR packages? [Y/n]" {aur_appsq,,}
+    read -p "Would you like to install AUR packages? [Y/n]" aur_appsq
+    aur_appsq=${aur_appsq,,}
     if [ $aur_appsq = "y" ] || [ $aur_appsq = "yes" ] || [ -z $aur_appsq ]; then
-        yay visual-studio-code-bin coolercontrol coolercontrold plasma6-applets-kurve
+        yay -S --needed visual-studio-code-bin coolercontrol coolercontrold plasma6-applets-kurve
     else
         echo "Skipping AUR package installation..."
     fi
