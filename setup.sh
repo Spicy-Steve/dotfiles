@@ -235,11 +235,13 @@ else
 fi
 
 # === Package Installation (AUR) ===
-read -p "Would you like to install AUR packages? [Y/n]" {aur_appsq,,}
-if [ $aur_appsq = "y" ] || [ $aur_appsq = "yes" ] || [ -z $aur_appsq ]; then
-    yay visual-studio-code-bin coolercontrol coolercontrold plasma6-applets-kurve
-else
-    echo "Skipping AUR package installation..."
+if [ -f /etc/arch-release ]; then
+    read -p "Would you like to install AUR packages? [Y/n]" {aur_appsq,,}
+    if [ $aur_appsq = "y" ] || [ $aur_appsq = "yes" ] || [ -z $aur_appsq ]; then
+        yay visual-studio-code-bin coolercontrol coolercontrold plasma6-applets-kurve
+    else
+        echo "Skipping AUR package installation..."
+    fi
 fi
 
 # === Copy Pacman config (Arch only) ===
