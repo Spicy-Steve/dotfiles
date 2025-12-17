@@ -1,8 +1,14 @@
 #!/bin/bash
-set -e  # Stop on any error
-set -u  # Treat unset vars as errors
+set -e   # Stop on any error
+set -u   # Treat unset vars as errors
+cd $HOME # Run script in home directory
 
 # === Prevent accidentally running ===
+echo "=== INFO ==="
+echo "Primarily designed for arch linux, but will work on other systems"
+echo "Full media codecs will be installed on Fedora systems"
+echo "Designed for KDE Plasma, running on other DEs has not been tested"
+echo ""
 read -p "Are you sure you want to start the setup? [Y/n]" {confirm,,}
 if [ $confirm = "y" ] || [ $confirm = "yes" ] || [ -z $confirm ]; then
     echo "Starting system setup & configuration..."
@@ -38,14 +44,26 @@ fi
 
 # === Update the system ===
 if [ -f /etc/fedora-release ]; then
-    sudo dnf update
+    sudo dnf update -y
 elif [ -f /etc/arch-release ]; then
-    sudo pacman -Syu
+    sudo pacman -Syu --noconfirm
 elif [ -f /etc/debian_version ]; then
     sudo apt update && sudo apt upgrade
-else
-    echo "Unsupported distro. Please edit script to add support."
-    exit 1
+fi
+
+# === Full media codecs on Fedora ===
+    if [ -f /etc/fedora-release ]; then
+    # === Add RPM Fusion media repo ===
+    echo "Adding required repositories..."
+    $PKG_INSTALL https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+    # === Update the system ===
+    echo "Making sure the system is up to date..."
+    dnf update -y
+
+    # === Swap codecs ===
+    echo "Installing full media codec support..."
+    dnf swap ffmpeg-free ffmpeg --allowerasing -y
 fi
 
 # === Install dependencies ===
@@ -56,7 +74,7 @@ $PKG_INSTALL git zsh curl wget cowsay
 if [ -f /etc/arch-release ]; then
     if ! command -v yay &>/dev/null; then
         echo "Installing yay (AUR helper)..."
-        sudo pacman -S --needed --noconfirm base-devel git
+        $PKG_INSTALL base-devel
         mkdir ~/.yay
         git clone https://aur.archlinux.org/yay-bin.git ~/.yay
         cd ~/.yay
@@ -68,29 +86,79 @@ else
     echo "Skipping yay install - not an Arch system."
 fi
 
-# === Install GPU Drivers (ARCH ONLY) ===
+# === Ask for GPU vendor ===
+while true; do
+    read -p "Enter GPU vendor (AMD/NVIDIA/Intel): " gpu
+    gpu=${gpu,,}
+    case "$gpu" in
+        amd|intel|nvidia)
+            break
+            ;;
+        *)
+            echo "Invalid entry. Please enter AMD, NVIDIA, or Intel."
+            ;;
+    esac
+done
+
+# === Install GPU Drivers (Arch) ===
 if [ -f /etc/arch-release ]; then    
-    echo "What is the GPU Vendor? (amd/nvidia/intel)"
-    read gpu
-    if [ ${gpu,,} = "amd" ]; then
+    if [ $gpu = "amd" ]; then
         $PKG_INSTALL mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon xf86-video-amdgpu
-    elif [ ${gpu,,} = "intel" ]; then
+    elif [ $gpu = "intel" ]; then
         $PKG_INSTALL mesa lib32-mesa vulkan-intel lib32-vulkan-intel xf86-video-intel
-    elif [ ${gpu,,} = "nvidia" ]; then
+    elif [ $gpu = "nvidia" ]; then
         $PKG_INSTALL nvidia nvidia-dkms nvidia-utils lib32-nvidia-utils
-        read -p "Install CUDA? [Y/n]" {cudaq,,}
-        if [ $cudaq = "y" ] || [ $cudaq = "yes" ] || [ -z $cudaq ]; then
+        read -p "Install CUDA? [Y/n]" cuda
+        cuda=${cuda,,}
+        if [ $cuda = "y" ] || [ $cuda = "yes" ] || [ -z $cuda ]; then
             $PKG_INSTALL cuda
         else
             echo "Skipping CUDA installation..."
         fi
-    else
-        echo "Invalid GPU Vendor, skipping..."
     fi
-else
-    echo "GPU Driver Installation only works on Arch Linux, skipping..."
 fi
 
+# === Install GPU Drivers (Fedora) ===
+if [ -f /etc/fedora-release ]; then
+    if [ $gpu = "amd" ]; then
+        echo "Installing GPU accelerated media packages for AMD..."
+        $PKG_INSTALL mesa-vdpau-drivers libva-utils
+
+        read -p "Would you like to install ROCm? (recommended for Machine Learning) [Y/n]" rocm
+        rocm=${rocm,,}
+        if [[ $rocm = "y" || $rocm = "yes" || -z $rocm ]]; then
+            echo "Adding ROCm repository..."
+            wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm
+            rpm -ivh epel-release-latest-10.noarch.rpm
+            dnf config-manager --enable codeready-builder-for-rhel-10-x86_64-rpms
+            $PKG_INSTALL python3-setuptools python3-wheel
+
+            echo "Installing ROCm..."
+            usermod -a -G render,video $LOGNAME # Add the current user to the render and video groups
+            $PKG_INSTALL rocm
+        fi
+
+    elif [ $gpu = "intel" ]; then
+        echo "Installing GPU accelerated media packages for Intel..."
+        $PKG_INSTALL intel-media-driver libva-utils
+
+    elif [ $gpu = "nvidia"]; then
+        echo "Installing NVIDIA driver and GPU accelerated media packages..."
+        $PKG_INSTALL akmod-nvidia xorg-x11-drv-nvidia-cuda libva-nvidia-driver
+
+        read -p "Would you like to install additional CUDA libraries? (reccomended for Machine Learning) [Y/n]" mlcuda
+        mlcuda=${mlcuda,,}
+        if [[ $mlcuda = "y" || $mlcuda = "yes" || -z $mlcuda ]]; then
+            echo "Adding CUDA repository..."
+            dnf config-manager addrepo --from-repofile=https://developer.download.nvidia.com/compute/cuda/repos/fedora42/$(uname -m)/cuda-fedora42.repo
+            dnf clean all
+
+            echo "Installing additional CUDA libraries..."
+            dnf config-manager setopt cuda-fedora42-$(uname -m).exclude=nvidia-driver,nvidia-modprobe,nvidia-persistenced,nvidia-settings,nvidia-libXNVCtrl,nvidia-xconfig
+            $PKG_INSTALL cuda-toolkit xorg-x11-drv-nvidia-cuda
+        fi
+    fi
+fi
 
 # === Clone dotfiles repo ===
 if [ ! -d "$DOTFILES_DIR" ]; then
@@ -124,11 +192,10 @@ if [ -f "$DOTFILES_DIR/.zshrc" ]; then
     cp -f "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 fi
 
-# === Copy Oh My Zsh custom configs if they exist ===
-if [ -d "$DOTFILES_DIR/oh-my-zsh-custom" ]; then
-    echo "Copying custom Oh My Zsh configuration..."
-    mkdir -p "$HOME/.oh-my-zsh/custom/"
-    cp -r "$DOTFILES_DIR/oh-my-zsh-custom/"* "$HOME/.oh-my-zsh/custom/"
+# === Copy powerlevel10k config ===
+if [ -f "$HOME/.p10k.zsh" ]; then
+    echo "Copying powerlevel10k configuration..."
+    cp -f "$DOTFILES_DIR/.p10k.zsh" "$HOME/.p10k.zsh"
 fi
 
 # === KDE Appearance ===
@@ -217,7 +284,7 @@ read -p "Would you like to install packages? [Y/n]" appsq
 appsq=${appsq,,}
 if [ $appsq = "y" ] || [ $appsq = "yes" ] || [ -z $appsq ]; then
     if [ -f /etc/fedora-release ]; then
-        $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects ffmpeg-full fastfetch flatpak goverlay mangohud pavucontrol prismlauncher python python-websockets qbittorrent qt6-qtwebsockets-devel speedtest-cli steam vlc vlc-plugins-all
+        $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects fastfetch flatpak goverlay mangohud pavucontrol prismlauncher python python-websockets qbittorrent qt6-qtwebsockets-devel speedtest-cli steam vlc vlc-plugins-all
     elif [ -f /etc/arch-release ]; then
         $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects ffmpeg fastfetch firefox flatpak goverlay mangohud partitionmanager pavucontrol prismlauncher python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
     elif [ -f /etc/debian_version ]; then
