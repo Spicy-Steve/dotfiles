@@ -114,17 +114,18 @@ source $ZSH/oh-my-zsh.sh
 alias pacinstall="sudo pacman -S"
 alias search="pacman -Ss"
 alias update="sudo pacman -Syu"
-alias updateall="sudo pacman -Syu && flatpak update"
+alias updateall="sudo pacman -Syu && yay -Sua && flatpak update"
 alias remove="sudo pacman -Rns"
 alias paclist="pacman -Qs"
 alias fuck="sudo pacman -Sy && sudo pacman -S archlinux-keyring --noconfirm && sudo pacman -Syyu"
+alias reinstallyay="cd ~ && sudo rm -r ~/.yay && git clone https://aur.archlinux.org/yay-bin.git ~/.yay && cd ~/.yay && makepkg -si"
 
 # <--- systemctl --->
 alias sysenable="sudo systemctl enable --now"
 alias sysdisable="sudo systemctl disable --now"
 
 # <--- MISC --->
-alias editzsh="kwrite .zshrc"
+alias editzsh="kwrite ~/.zshrc"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
