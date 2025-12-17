@@ -229,13 +229,16 @@ echo "Applying folder colours..."
 wget -qO- https://git.io/papirus-folders-install | sh
 papirus-folders -C carmine --theme Papirus-Dark
 
-# Icon theme
-lookandfeeltool --apply org.kde.breeze.desktop || true
-kwriteconfig6 --file kdeglobals --group Icons --key Theme "$ICON_THEME"
+# === KDE Only, skip otherwise ===
+if [ -f "/bin/plasmashell" ]; then
+    # Icon theme
+    lookandfeeltool --apply org.kde.breeze.desktop || true
+    kwriteconfig6 --file kdeglobals --group Icons --key Theme "$ICON_THEME"
 
-# Color scheme
-kwriteconfig6 --file kdeglobals --group General --key AccentColor "$ACCENT_COLOR"
-plasma-apply-colorscheme BreezeDark
+    # Color scheme
+    kwriteconfig6 --file kdeglobals --group General --key AccentColor "$ACCENT_COLOR"
+    plasma-apply-colorscheme BreezeDark
+fi
 
 # Wallpaper
 if [ -d "$WALLPAPER_PATH" ]; then
@@ -260,17 +263,22 @@ if [ -d "$DOTFILES_DIR/icons" ]; then
     fc-cache -fv
 fi
 
-# === Config ===
-if [ -d "$DOTFILES_DIR/kde-config" ]; then
-    echo "Copying config files..."
-    cp -r "$DOTFILES_DIR/kde-config/"* ~/.config/
-fi
+# === KDE Only, skip otherwise ===
+if [ -f "/bin/plasmashell" ]; then
+    # === Config ===
+    if [ -d "$DOTFILES_DIR/kde-config" ]; then
+        echo "Copying config files..."
+        cp -r "$DOTFILES_DIR/kde-config/"* ~/.config/
+    fi
 
-# === Konsole config ===
-if [ -d "$DOTFILES_DIR/konsole" ]; then
-    echo "Applying Konsole profiles and color schemes..."
-    mkdir -p ~/.local/share/konsole/
-    cp -r "$DOTFILES_DIR/konsole/"* ~/.local/share/konsole/
+    # === Konsole config ===
+    if [ -d "$DOTFILES_DIR/konsole" ]; then
+        echo "Applying Konsole profiles and color schemes..."
+        mkdir -p ~/.local/share/konsole/
+        cp -r "$DOTFILES_DIR/konsole/"* ~/.local/share/konsole/
+    fi
+else
+    echo "Plasma not installed, apply icons, colours, fonts, and wallpapers manually..."
 fi
 
 # === Change default shell to zsh ===
@@ -295,10 +303,27 @@ else
 fi
 
 # === Flatpak Installation ===
-read -p "Would you like to install flatpak && flatpak apps? [Y/n]" flatpakq
+read -p "Would you like to install flatpak && essential flatpak apps? [Y/n]" flatpakq
 flatpakq=${flatpakq,,}
 if [ $flatpakq = "y" ] || [ $flatpakq = "yes" ] || [ -z $flatpakq ]; then
-    flatpak install com.dec05eba.gpu_screen_recorder com.github.Matoking.protontricks com.github.tchx84.Flatseal com.steamgriddb.SGDBoop com.vysp3r.ProtonPlus io.missioncenter.MissionCenter it.mijorus.gearlever org.localsend.localsend_app
+    flatpak install com.dec05eba.gpu_screen_recorder com.github.tchx84.Flatseal com.vysp3r.ProtonPlus io.missioncenter.MissionCenter it.mijorus.gearlever org.localsend.localsend_app
+    
+    # === Ask for gaming packages ===
+    read -p "Would you like to install essential gaming flatpaks? [Y/n]" game
+    game=${game,,}
+    if [[ $game = "y" || $game = "yes" || -z $game ]]; then
+        echo "Installing essential gaming packages..."
+        dnf install -y steam goverlay wine
+
+        if [[ $fpkrepo = "y" || $fpkrepo = "yes" || -z $fpkrepo ]]; then
+            echo "Installing gaming flatpaks..."
+            flatpak install -y com.github.Matoking.protontricks net.davidotek.pupgui2 com.steamgriddb.SGDBoop
+        fi
+    else
+        echo "Skipping..."
+        continue
+    fi
+
 else
     echo "Skipping flatpak installation..."
 fi
