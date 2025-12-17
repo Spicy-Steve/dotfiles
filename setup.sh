@@ -7,7 +7,7 @@ cd $HOME # Run script in home directory
 echo "=== INFO ==="
 echo "Primarily designed for arch linux, but will work on other systems"
 echo "Full media codecs will be installed on Fedora systems"
-echo "Designed for KDE Plasma, running on other DEs has not been tested"
+echo "Designed for KDE Plasma, will not apply KDE configs if plasmashell does not exist"
 echo ""
 read -p "Are you sure you want to start the setup? [Y/n]" {confirm,,}
 if [ $confirm = "y" ] || [ $confirm = "yes" ] || [ -z $confirm ]; then
@@ -51,8 +51,14 @@ elif [ -f /etc/debian_version ]; then
     sudo apt update && sudo apt upgrade
 fi
 
+# === Set DNF defaultyes to "Y" ===
+if [ -f /etc/fedora-release ]; then
+    echo "Setting DNF to assume 'yes' for all prompts..."
+    echo "defaultyes=True" >> /etc/dnf/dnf.conf
+fi
+
 # === Full media codecs on Fedora ===
-    if [ -f /etc/fedora-release ]; then
+if [ -f /etc/fedora-release ]; then
     # === Add RPM Fusion media repo ===
     echo "Adding required repositories..."
     $PKG_INSTALL https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -292,11 +298,14 @@ read -p "Would you like to install packages? [Y/n]" appsq
 appsq=${appsq,,}
 if [ $appsq = "y" ] || [ $appsq = "yes" ] || [ -z $appsq ]; then
     if [ -f /etc/fedora-release ]; then
-        $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects fastfetch flatpak goverlay mangohud pavucontrol prismlauncher python python-websockets qbittorrent qt6-qtwebsockets-devel speedtest-cli steam vlc vlc-plugins-all
+        $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects fastfetch goverlay mangohud prismlauncher python python-websockets qbittorrent qt6-qtwebsockets-devel speedtest-cli steam vlc vlc-plugins-all
+        
+        echo "Enabling flatpak repository..."
+        flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
     elif [ -f /etc/arch-release ]; then
-        $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects ffmpeg fastfetch firefox flatpak goverlay mangohud partitionmanager pavucontrol prismlauncher python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
+        $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects ffmpeg fastfetch firefox flatpak goverlay mangohud partitionmanager prismlauncher python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
     elif [ -f /etc/debian_version ]; then
-        $PKG_INSTALL ark btop cava cmatrix discord easyeffects fastfetch flatpak google-android-platform-tools-installer goverlay mangohud pavucontrol prismlauncher python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
+        $PKG_INSTALL ark btop cava cmatrix discord easyeffects fastfetch flatpak google-android-platform-tools-installer goverlay mangohud python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
     fi
 else
     echo "Skipping package installation..."
@@ -306,19 +315,14 @@ fi
 read -p "Would you like to install flatpak && essential flatpak apps? [Y/n]" flatpakq
 flatpakq=${flatpakq,,}
 if [ $flatpakq = "y" ] || [ $flatpakq = "yes" ] || [ -z $flatpakq ]; then
-    flatpak install com.dec05eba.gpu_screen_recorder com.github.tchx84.Flatseal com.vysp3r.ProtonPlus io.missioncenter.MissionCenter it.mijorus.gearlever org.localsend.localsend_app
+    flatpak install com.dec05eba.gpu_screen_recorder com.github.tchx84.Flatseal it.mijorus.gearlever org.localsend.localsend_app
     
-    # === Ask for gaming packages ===
-    read -p "Would you like to install essential gaming flatpaks? [Y/n]" game
-    game=${game,,}
-    if [[ $game = "y" || $game = "yes" || -z $game ]]; then
-        echo "Installing essential gaming packages..."
-        dnf install -y steam goverlay wine
-
-        if [[ $fpkrepo = "y" || $fpkrepo = "yes" || -z $fpkrepo ]]; then
-            echo "Installing gaming flatpaks..."
-            flatpak install -y com.github.Matoking.protontricks net.davidotek.pupgui2 com.steamgriddb.SGDBoop
-        fi
+    # === Ask for gaming flatpaks ===
+    read -p "Would you like to install essential gaming flatpaks? [Y/n]" gamefpk
+    gamefpk=${gamefpk,,}
+    if [[ $gamefpk = "y" || $gamefpk = "yes" || -z $gamefpk ]]; then
+        echo "Installing gaming flatpaks..."
+        flatpak install -y com.github.Matoking.protontricks net.davidotek.pupgui2 com.steamgriddb.SGDBoop
     else
         echo "Skipping..."
         continue
@@ -333,7 +337,7 @@ if [ -f /etc/arch-release ]; then
     read -p "Would you like to install AUR packages? [Y/n]" aur_appsq
     aur_appsq=${aur_appsq,,}
     if [ $aur_appsq = "y" ] || [ $aur_appsq = "yes" ] || [ -z $aur_appsq ]; then
-        yay -S --needed visual-studio-code-bin coolercontrol coolercontrold plasma6-applets-kurve
+        yay -S --needed visual-studio-code-bin plasma6-applets-kurve
     else
         echo "Skipping AUR package installation..."
     fi
@@ -349,12 +353,10 @@ if [ -f /etc/arch-release ]; then
     fi
 fi
 
-# Restart Plasma shell to apply changes (optional)
-if pgrep plasmashell &>/dev/null; then
-    echo "Restarting Plasma shell..."
-    pkill plasmashell && kstart5 plasmashell &
-fi
-
 fastfetch
-echo "=== Setup complete! ==="
-echo "Log out/in for changes to apply."
+echo "=== Setup Complete! ==="
+read -p "Do you wish to reboot? (please make sure everything is saved) [Y/n]" reboot
+reboot=${reboot,,}
+if [[ $reboot = "y" || $reboot = "yes" || -z $reboot ]]; then
+    reboot now
+fi
