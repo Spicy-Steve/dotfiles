@@ -3,6 +3,12 @@ set -e   # Stop on any error
 set -u   # Treat unset vars as errors
 cd $HOME # Run script in home directory
 
+# === Detect root privilages ===
+if [[ $EUID -ne 0 ]]; then
+    echo "Please run this script with sudo or as root user instead of $USER"
+    exit 1
+fi
+
 # === Prevent accidentally running ===
 echo "=== INFO ==="
 echo "Primarily designed for arch linux, but will work on other systems"
