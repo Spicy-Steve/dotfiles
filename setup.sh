@@ -202,12 +202,29 @@ fi
 if [ -f "$DOTFILES_DIR/.zshrc" ]; then
     echo "Applying .zshrc from dotfiles..."
     cp -f "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
+    read -p "Overwrite .zshrc ? [Y/n]" owzsh
+    owzsh=${owzsh,,}
+    if [[ $owzsh = "y" || $owzsh = "yes" || -z $owzsh ]]
+        echo "Overwriting .p10k.zsh ..."
+        cp -f "$DOTFILES_DIR/.p10k.zsh" "$HOME/.p10k.zsh"
+    else
+        continue
+    fi
 fi
 
 # === Copy powerlevel10k config ===
 if [ -f "$HOME/.p10k.zsh" ]; then
     echo "Copying powerlevel10k configuration..."
     cp -f "$DOTFILES_DIR/.p10k.zsh" "$HOME/.p10k.zsh"
+else
+    read -p "Overwrite .p10k.zsh ? [Y/n]" ptenk
+    ptenk=${ptenk,,}
+    if [[ $ptenk = "y" || $ptenk = "yes" || -z $ptenk ]]
+        echo "Overwriting .p10k.zsh ..."
+        cp -f "$DOTFILES_DIR/.p10k.zsh" "$HOME/.p10k.zsh"
+    else
+        continue
+    fi
 fi
 
 # === KDE Appearance ===
