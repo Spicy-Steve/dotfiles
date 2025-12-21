@@ -10,7 +10,7 @@ echo "Full media codecs will be installed on Fedora systems"
 echo "Designed for KDE Plasma, will not apply KDE configs if plasmashell does not exist"
 echo ""
 read -p "Are you sure you want to start the setup? [Y/n]" {confirm,,}
-if [ $confirm = "y" ] || [ $confirm = "yes" ] || [ -z $confirm ]; then
+if [[ $confirm = "y" || $confirm = "yes" || -z $confirm ]]; then
     echo "Starting system setup & configuration..."
 else
     echo "Setup aborted!"
@@ -116,7 +116,7 @@ if [ -f /etc/arch-release ]; then
         $PKG_INSTALL nvidia nvidia-dkms nvidia-utils lib32-nvidia-utils
         read -p "Install CUDA? [Y/n]" cuda
         cuda=${cuda,,}
-        if [ $cuda = "y" ] || [ $cuda = "yes" ] || [ -z $cuda ]; then
+        if [[ $cuda = "y" || $cuda = "yes" || -z $cuda ]]; then
             $PKG_INSTALL cuda
         else
             echo "Skipping CUDA installation..."
@@ -296,7 +296,7 @@ fi
 # === Package Installation ===
 read -p "Would you like to install packages? [Y/n]" appsq
 appsq=${appsq,,}
-if [ $appsq = "y" ] || [ $appsq = "yes" ] || [ -z $appsq ]; then
+if [[ $appsq = "y" || $appsq = "yes" || -z $appsq ]]; then
     if [ -f /etc/fedora-release ]; then
         $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects fastfetch goverlay mangohud prismlauncher python python-websockets qbittorrent qt6-qtwebsockets-devel speedtest-cli steam vlc vlc-plugins-all
         
@@ -314,7 +314,7 @@ fi
 # === Flatpak Installation ===
 read -p "Would you like to install flatpak && essential flatpak apps? [Y/n]" flatpakq
 flatpakq=${flatpakq,,}
-if [ $flatpakq = "y" ] || [ $flatpakq = "yes" ] || [ -z $flatpakq ]; then
+if [[ $flatpakq = "y" || $flatpakq = "yes" || -z $flatpakq ]]; then
     flatpak install com.dec05eba.gpu_screen_recorder com.github.tchx84.Flatseal it.mijorus.gearlever org.localsend.localsend_app
     
     # === Ask for gaming flatpaks ===
@@ -336,7 +336,7 @@ fi
 if [ -f /etc/arch-release ]; then
     read -p "Would you like to install AUR packages? [Y/n]" aur_appsq
     aur_appsq=${aur_appsq,,}
-    if [ $aur_appsq = "y" ] || [ $aur_appsq = "yes" ] || [ -z $aur_appsq ]; then
+    if [[ $aur_appsq = "y" || [ $aur_appsq = "yes" || -z $aur_appsq ]]; then
         yay -S --needed visual-studio-code-bin plasma6-applets-kurve
     else
         echo "Skipping AUR package installation..."
