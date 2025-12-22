@@ -166,9 +166,9 @@ if [ $LINUX = "fedora" ]; then
         echo "Installing GPU accelerated media packages for AMD..."
         $PKG_INSTALL mesa-vdpau-drivers libva-utils
 
-        read -p "Would you like to install ROCm? (recommended for Machine Learning) [Y/n]" rocm
+        read -p "Would you like to install ROCm? (recommended for Machine Learning) [y/N]" rocm
         rocm=${rocm,,}
-        if [[ $rocm = "y" || $rocm = "yes" || -z $rocm ]]; then
+        if [[ $rocm = "y" || $rocm = "yes" ]]; then
             echo "Adding ROCm repository..."
             wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm
             rpm -ivh epel-release-latest-10.noarch.rpm
