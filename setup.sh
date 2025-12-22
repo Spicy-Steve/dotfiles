@@ -3,12 +3,6 @@ set -e   # Stop on any error
 set -u   # Treat unset vars as errors
 cd $HOME # Run script in home directory
 
-# === Detect root privilages ===
-if [[ $EUID -ne 0 ]]; then
-    echo "Please run this script with sudo or as root user instead of $USER"
-    exit 1
-fi
-
 # === Prevent accidentally running ===
 echo "=== INFO ==="
 echo "Primarily designed for arch linux, but will work on other systems"
@@ -51,17 +45,6 @@ else
     exit 1
 fi
 
-if [ $LINUX = "fedora" ]; then
-    PKG_INSTALL="sudo dnf install -y"
-elif [ $LINUX = "arch" ]; then
-    PKG_INSTALL="sudo pacman -Syu --noconfirm"
-elif [ $LINUX = "debian" ]; then
-    PKG_INSTALL="sudo apt install -y"
-else
-    echo "Unsupported distro. Please edit script to add support."
-    exit 1
-fi
-
 # === Check package manager for the system is functional ===
 if [ $LINUX = "fedora" ] && ! command -v dnf &> /dev/null; then
         echo "Something has gone terribly wrong, dnf was not found!"
@@ -92,7 +75,7 @@ fi
 # === Set DNF defaultyes to "Y" ===
 if [ $LINUX = "fedora" ]; then
     echo "Setting DNF to assume 'yes' for all prompts..."
-    echo "defaultyes=True" >> /etc/dnf/dnf.conf
+    sudo echo "defaultyes=True" >> /etc/dnf/dnf.conf
     
     # === Full media codecs on Fedora ===
     # === Add RPM Fusion media repo ===
@@ -101,11 +84,11 @@ if [ $LINUX = "fedora" ]; then
 
     # === Update the system ===
     echo "Making sure the system is up to date..."
-    dnf update -y
+    sudo dnf update -y
 
     # === Swap codecs ===
     echo "Installing full media codec support..."
-    dnf swap ffmpeg-free ffmpeg --allowerasing -y
+    sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
 fi
 
 # === Install dependencies ===
@@ -250,7 +233,7 @@ if [ -f "$HOME/.p10k.zsh" ]; then
 else
     read -p "Overwrite .p10k.zsh ? [Y/n]" ptenk
     ptenk=${ptenk,,}
-    if [[ $ptenk = "y" || $ptenk = "yes" || -z $ptenk ]]
+    if [[ $ptenk = "y" || $ptenk = "yes" || -z $ptenk ]]; then
         echo "Overwriting .p10k.zsh ..."
         cp -f "$DOTFILES_DIR/.p10k.zsh" "$HOME/.p10k.zsh"
     else
