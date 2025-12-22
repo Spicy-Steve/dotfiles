@@ -38,33 +38,63 @@ echo "=== Starting setup for $USER ==="
 
 # === Detect distro ===
 if [ -f /etc/fedora-release ]; then
+    LINUX="fedora"
     PKG_INSTALL="sudo dnf install -y"
 elif [ -f /etc/arch-release ]; then
+    LINUX="arch"
     PKG_INSTALL="sudo pacman -Syu --noconfirm"
 elif [ -f /etc/debian_version ]; then
+    LINUX="debian"
     PKG_INSTALL="sudo apt install -y"
 else
     echo "Unsupported distro. Please edit script to add support."
     exit 1
 fi
 
+if [ $LINUX = "fedora" ]; then
+    PKG_INSTALL="sudo dnf install -y"
+elif [ $LINUX = "arch" ]; then
+    PKG_INSTALL="sudo pacman -Syu --noconfirm"
+elif [ $LINUX = "debian" ]; then
+    PKG_INSTALL="sudo apt install -y"
+else
+    echo "Unsupported distro. Please edit script to add support."
+    exit 1
+fi
+
+# === Check package manager for the system is functional ===
+if [ $LINUX = "fedora" ] && ! command -v dnf &> /dev/null; then
+        echo "Something has gone terribly wrong, dnf was not found!"
+        echo "Try to remedy this by installing dnf (if this is Fedora, of course) or by reinstalling Fedora from https://fedoraproject.org (legitimate site)"
+        exit 1
+fi
+if [ $LINUX = "arch" ] && ! command -v pacman &> /dev/null; then
+        echo "Something has gone terribly wrong, pacman was not found!"
+        echo "Try to remedy this by installing pacman (if this is Arch Linux, of course) or by reinstalling Arch Linux from https://archlinux.org (legitimate site)"
+        exit 1
+fi
+if [ $LINUX = "debian" ] && ! command -v apt &> /dev/null; then
+        echo "Something has gone terribly wrong, apt was not found!"
+        echo "Try to remedy this by installing apt (if this is Debian, of course) or by reinstalling Debian from https://debian.org (legitimate site)"
+        exit 1
+fi
+
+
 # === Update the system ===
-if [ -f /etc/fedora-release ]; then
+if [ $LINUX = "fedora" ]; then
     sudo dnf update -y
-elif [ -f /etc/arch-release ]; then
+elif [ $LINUX = "arch" ]; then
     sudo pacman -Syu --noconfirm
-elif [ -f /etc/debian_version ]; then
+elif [ $LINUX = "debian" ]; then
     sudo apt update && sudo apt upgrade
 fi
 
 # === Set DNF defaultyes to "Y" ===
-if [ -f /etc/fedora-release ]; then
+if [ $LINUX = "fedora" ]; then
     echo "Setting DNF to assume 'yes' for all prompts..."
     echo "defaultyes=True" >> /etc/dnf/dnf.conf
-fi
-
-# === Full media codecs on Fedora ===
-if [ -f /etc/fedora-release ]; then
+    
+    # === Full media codecs on Fedora ===
     # === Add RPM Fusion media repo ===
     echo "Adding required repositories..."
     $PKG_INSTALL https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -83,7 +113,7 @@ echo "Installing dependencies..."
 $PKG_INSTALL git zsh curl wget cowsay
 
 # === Install yay (AUR helper, Arch only) ===
-if [ -f /etc/arch-release ]; then
+if [ $LINUX = "arch" ]; then
     if ! command -v yay &>/dev/null; then
         echo "Installing yay (AUR helper)..."
         $PKG_INSTALL base-devel
@@ -113,7 +143,7 @@ while true; do
 done
 
 # === Install GPU Drivers (Arch) ===
-if [ -f /etc/arch-release ]; then    
+if [ $LINUX = "arch" ]; then 
     if [ $gpu = "amd" ]; then
         $PKG_INSTALL mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon xf86-video-amdgpu
     elif [ $gpu = "intel" ]; then
@@ -131,7 +161,7 @@ if [ -f /etc/arch-release ]; then
 fi
 
 # === Install GPU Drivers (Fedora) ===
-if [ -f /etc/fedora-release ]; then
+if [ $LINUX = "fedora" ]; then
     if [ $gpu = "amd" ]; then
         echo "Installing GPU accelerated media packages for AMD..."
         $PKG_INSTALL mesa-vdpau-drivers libva-utils
@@ -202,11 +232,12 @@ fi
 if [ -f "$DOTFILES_DIR/.zshrc" ]; then
     echo "Applying .zshrc from dotfiles..."
     cp -f "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
+else
     read -p "Overwrite .zshrc ? [Y/n]" owzsh
     owzsh=${owzsh,,}
     if [[ $owzsh = "y" || $owzsh = "yes" || -z $owzsh ]]
-        echo "Overwriting .p10k.zsh ..."
-        cp -f "$DOTFILES_DIR/.p10k.zsh" "$HOME/.p10k.zsh"
+        echo "Overwriting .zshrc ..."
+        cp -f "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
     else
         continue
     fi
@@ -245,7 +276,7 @@ if [ -d "$DOTFILES_DIR/cursors" ]; then
     elif command -v plasma-apply-cursortheme &>/dev/null; then
         plasma-apply-cursortheme Bibata-6bcde
     else
-        echo "Could not automatically apply cursor — please select it manually in system settings."
+        echo "Could not automatically apply cursor - please select it manually in system settings."
     fi
 else
     echo "No cursor directory found in dotfiles."
@@ -259,7 +290,9 @@ wget -qO- https://git.io/papirus-folders-install | sh
 papirus-folders -C carmine --theme Papirus-Dark
 
 # === KDE Only, skip otherwise ===
-if [ -f "/bin/plasmashell" ]; then
+if command -v plasmashell &>/dev/null; then
+    echo "Applying colours..."
+
     # Icon theme
     lookandfeeltool --apply org.kde.breeze.desktop || true
     kwriteconfig6 --file kdeglobals --group Icons --key Theme "$ICON_THEME"
@@ -267,6 +300,8 @@ if [ -f "/bin/plasmashell" ]; then
     # Color scheme
     kwriteconfig6 --file kdeglobals --group General --key AccentColor "$ACCENT_COLOR"
     plasma-apply-colorscheme BreezeDark
+else
+    continue
 fi
 
 # Wallpaper
@@ -293,7 +328,7 @@ if [ -d "$DOTFILES_DIR/icons" ]; then
 fi
 
 # === KDE Only, skip otherwise ===
-if [ -f "/bin/plasmashell" ]; then
+if command -v plasmashell &>/dev/null; then
     # === Config ===
     if [ -d "$DOTFILES_DIR/kde-config" ]; then
         echo "Copying config files..."
@@ -320,14 +355,14 @@ fi
 read -p "Would you like to install packages? [Y/n]" appsq
 appsq=${appsq,,}
 if [[ $appsq = "y" || $appsq = "yes" || -z $appsq ]]; then
-    if [ -f /etc/fedora-release ]; then
+    if [ $LINUX = "fedora" ]; then
         $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects fastfetch goverlay mangohud prismlauncher python python-websockets qbittorrent qt6-qtwebsockets-devel speedtest-cli steam vlc vlc-plugins-all
         
         echo "Enabling flatpak repository..."
         flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-    elif [ -f /etc/arch-release ]; then
+    elif [ $LINUX = "arch" ]; then
         $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects ffmpeg fastfetch firefox flatpak goverlay mangohud partitionmanager prismlauncher python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
-    elif [ -f /etc/debian_version ]; then
+    elif [ $LINUX = "debian" ]; then
         $PKG_INSTALL ark btop cava cmatrix discord easyeffects fastfetch flatpak google-android-platform-tools-installer goverlay mangohud python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
     fi
 else
@@ -335,7 +370,7 @@ else
 fi
 
 # === Flatpak Installation ===
-read -p "Would you like to install flatpak && essential flatpak apps? [Y/n]" flatpakq
+read -p "Would you like to install essential flatpak apps? [Y/n]" flatpakq
 flatpakq=${flatpakq,,}
 if [[ $flatpakq = "y" || $flatpakq = "yes" || -z $flatpakq ]]; then
     flatpak install com.dec05eba.gpu_screen_recorder com.github.tchx84.Flatseal it.mijorus.gearlever org.localsend.localsend_app
@@ -356,10 +391,10 @@ else
 fi
 
 # === Package Installation (AUR) ===
-if [ -f /etc/arch-release ]; then
+if [ $LINUX = "arch" ]; then
     read -p "Would you like to install AUR packages? [Y/n]" aur_appsq
     aur_appsq=${aur_appsq,,}
-    if [[ $aur_appsq = "y" || [ $aur_appsq = "yes" || -z $aur_appsq ]]; then
+    if [[ $aur_appsq = "y" || $aur_appsq = "yes" || -z $aur_appsq ]]; then
         yay -S --needed visual-studio-code-bin plasma6-applets-kurve
     else
         echo "Skipping AUR package installation..."
@@ -367,7 +402,7 @@ if [ -f /etc/arch-release ]; then
 fi
 
 # === Copy Pacman config (Arch only) ===
-if [ -f /etc/arch-release ]; then
+if [ $LINUX = "arch" ]; then
     if [ -f "$DOTFILES_DIR/pacman.conf" ]; then
         echo "Applying custom pacman configuration..."
         sudo cp -f "$DOTFILES_DIR/pacman.conf" /etc/pacman.conf
