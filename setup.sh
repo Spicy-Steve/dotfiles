@@ -97,7 +97,7 @@ $PKG_INSTALL git zsh curl wget cowsay
 
 # === Install yay (AUR helper, Arch only) ===
 if [ $LINUX = "arch" ]; then
-    if ! command -v yay &>/dev/null; then
+    if ! command -v yay &> /dev/null; then
         echo "Installing yay (AUR helper)..."
         $PKG_INSTALL base-devel
         mkdir ~/.yay
@@ -254,9 +254,9 @@ if [ -d "$DOTFILES_DIR/cursors" ]; then
     CURSOR_NAME=$(ls "$DOTFILES_DIR/cursors" | head -n 1)
 
     # Apply cursor (KDE or GNOME based)
-    if command -v gsettings &>/dev/null; then
+    if command -v gsettings &> /dev/null; then
         gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR_NAME"
-    elif command -v plasma-apply-cursortheme &>/dev/null; then
+    elif command -v plasma-apply-cursortheme &> /dev/null; then
         plasma-apply-cursortheme Bibata-6bcde
     else
         echo "Could not automatically apply cursor - please select it manually in system settings."
@@ -273,7 +273,7 @@ wget -qO- https://git.io/papirus-folders-install | sh
 papirus-folders -C carmine --theme Papirus-Dark
 
 # === KDE Only, skip otherwise ===
-if command -v plasmashell &>/dev/null; then
+if command -v plasmashell &> /dev/null; then
     echo "Applying colours..."
 
     # Icon theme
@@ -311,7 +311,7 @@ if [ -d "$DOTFILES_DIR/icons" ]; then
 fi
 
 # === KDE Only, skip otherwise ===
-if command -v plasmashell &>/dev/null; then
+if command -v plasmashell &> /dev/null; then
     # === Config ===
     if [ -d "$DOTFILES_DIR/kde-config" ]; then
         echo "Copying config files..."
@@ -394,7 +394,9 @@ if [ $LINUX = "arch" ]; then
     fi
 fi
 
-fastfetch
+if command -v fastfetch  /dev/null; then
+    fastfetch
+fi
 echo "=== Setup Complete! ==="
 read -p "Do you wish to reboot? (please make sure everything is saved) [Y/n]" reboot
 reboot=${reboot,,}
