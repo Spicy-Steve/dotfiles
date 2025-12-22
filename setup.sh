@@ -33,7 +33,7 @@ echo "=== Starting setup for $USER ==="
 # === Detect distro ===
 if [ -f /etc/fedora-release ]; then
     LINUX="fedora"
-    PKG_INSTALL="sudo dnf install -y"
+    PKG_INSTALL="sudo dnf install -y --skip-unavailable"
 elif [ -f /etc/arch-release ]; then
     LINUX="arch"
     PKG_INSTALL="sudo pacman -Syu --noconfirm"
