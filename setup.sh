@@ -235,7 +235,7 @@ if [ -f "$DOTFILES_DIR/.zshrc" ]; then
 else
     read -p "Overwrite .zshrc ? [Y/n]" owzsh
     owzsh=${owzsh,,}
-    if [[ $owzsh = "y" || $owzsh = "yes" || -z $owzsh ]]
+    if [[ $owzsh = "y" || $owzsh = "yes" || -z $owzsh ]]; then
         echo "Overwriting .zshrc ..."
         cp -f "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
     else
