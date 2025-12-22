@@ -339,7 +339,7 @@ read -p "Would you like to install packages? [Y/n]" appsq
 appsq=${appsq,,}
 if [[ $appsq = "y" || $appsq = "yes" || -z $appsq ]]; then
     if [ $LINUX = "fedora" ]; then
-        $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects fastfetch goverlay mangohud prismlauncher python python-websockets qbittorrent qt6-qtwebsockets-devel speedtest-cli steam vlc vlc-plugins-all
+        $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects fastfetch goverlay mangohud python python-websockets qbittorrent qt6-qtwebsockets-devel speedtest-cli steam vlc vlc-plugins-all
         
         echo "Enabling flatpak repository..."
         flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
