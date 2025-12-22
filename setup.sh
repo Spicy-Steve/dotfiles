@@ -342,7 +342,7 @@ if [[ $appsq = "y" || $appsq = "yes" || -z $appsq ]]; then
         $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects fastfetch goverlay mangohud python python-websockets qbittorrent qt6-qtwebsockets-devel speedtest-cli steam vlc vlc-plugins-all
         
         echo "Enabling flatpak repository..."
-        flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+        sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
     elif [ $LINUX = "arch" ]; then
         $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects ffmpeg fastfetch firefox flatpak goverlay mangohud partitionmanager prismlauncher python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
     elif [ $LINUX = "debian" ]; then
