@@ -216,10 +216,10 @@ if [ -f "$DOTFILES_DIR/.zshrc" ]; then
     echo "Applying .zshrc from dotfiles..."
     cp -f "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 else
-    read -p "Overwrite .zshrc ? [Y/n]" owzsh
+    read -p "Found that .zshrc already exists, Overwrite .zshrc ? [Y/n]" owzsh
     owzsh=${owzsh,,}
     if [[ $owzsh = "y" || $owzsh = "yes" || -z $owzsh ]]; then
-        echo "Overwriting .zshrc ..."
+        echo "Found that .p10k.zsh already exists, Overwriting .zshrc ..."
         cp -f "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
     else
         continue
