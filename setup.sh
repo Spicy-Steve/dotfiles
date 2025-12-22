@@ -75,7 +75,7 @@ fi
 # === Set DNF defaultyes to "Y" ===
 if [ $LINUX = "fedora" ]; then
     echo "Setting DNF to assume 'yes' for all prompts..."
-    sudo echo "defaultyes=True" >> /etc/dnf/dnf.conf
+    sudo echo "defaultyes=True" | sudo tee -a /etc/dnf/dnf.conf
     
     # === Full media codecs on Fedora ===
     # === Add RPM Fusion media repo ===
