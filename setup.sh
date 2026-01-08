@@ -378,7 +378,7 @@ if [ $LINUX = "arch" ]; then
     read -p "Would you like to install AUR packages? [Y/n]" aur_appsq
     aur_appsq=${aur_appsq,,}
     if [[ $aur_appsq = "y" || $aur_appsq = "yes" || -z $aur_appsq ]]; then
-        yay -S --needed visual-studio-code-bin plasma6-applets-kurve
+        yay -S --needed visual-studio-code-bin plasma6-applets-kurve coolercontrol-bin
     else
         echo "Skipping AUR package installation..."
     fi
