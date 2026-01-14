@@ -8,6 +8,7 @@ echo "=== INFO ==="
 echo "Primarily designed for arch linux, but will work on other systems"
 echo "Full media codecs will be installed on Fedora systems"
 echo "Designed for KDE Plasma, will not apply KDE configs if plasmashell does not exist"
+echo "<--- MINIMAL --->"
 echo ""
 read -p "Are you sure you want to start the setup? [Y/n]" {confirm,,}
 if [[ $confirm = "y" || $confirm = "yes" || -z $confirm ]]; then
@@ -44,6 +45,8 @@ else
     echo "Unsupported distro. Please edit script to add support."
     exit 1
 fi
+
+echo "Distrobution detected: $LINUX"
 
 # === Check package manager for the system is functional ===
 if [ $LINUX = "fedora" ] && ! command -v dnf &> /dev/null; then
@@ -190,7 +193,7 @@ if [ ! -d "$DOTFILES_DIR" ]; then
     echo "Cloning dotfiles from GitHub..."
     git clone "https://github.com/$GITHUB_USER/$DOTFILES_REPO.git" "$DOTFILES_DIR"
 else
-    echo "Dotfiles already cloned — pulling latest changes..."
+    echo "Dotfiles already cloned - pulling latest changes..."
     git -C "$DOTFILES_DIR" pull
 fi
 
@@ -219,7 +222,7 @@ else
     read -p "Found existing .zshrc, Overwrite .zshrc ? [Y/n]" owzsh
     owzsh=${owzsh,,}
     if [[ $owzsh = "y" || $owzsh = "yes" || -z $owzsh ]]; then
-        echo "1 Overwriting .zshrc ..."
+        echo "Overwriting .zshrc ..."
         cp -f "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
     else
         continue
@@ -244,54 +247,31 @@ fi
 # === KDE Appearance ===
 echo "Applying KDE customization..."
 
-# === Apply cursor from dotfiles ===
-if [ -d "$DOTFILES_DIR/cursors" ]; then
-    echo "Installing and applying custom cursor..."
-    mkdir -p ~/.icons
-    cp -r "$DOTFILES_DIR/cursors"/* ~/.icons/
-
-    # Assuming your cursor folder name matches the theme name
-    CURSOR_NAME=$(ls "$DOTFILES_DIR/cursors" | head -n 1)
-
-    # Apply cursor (KDE or GNOME based)
-    if command -v gsettings &> /dev/null; then
-        gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR_NAME"
-    elif command -v plasma-apply-cursortheme &> /dev/null; then
-        plasma-apply-cursortheme Bibata-6bcde
-    else
-        echo "Could not automatically apply cursor - please select it manually in system settings."
-    fi
-else
-    echo "No cursor directory found in dotfiles."
-fi
-
 # === Install Papirus Icon Theme ===
 echo "Installing Papirus icons..."
 $PKG_INSTALL papirus-icon-theme
-echo "Applying folder colours..."
 wget -qO- https://git.io/papirus-folders-install | sh
-papirus-folders -C carmine --theme Papirus-Dark
 
-# === KDE Only, skip otherwise ===
-if command -v plasmashell &> /dev/null; then
-    echo "Applying colours..."
-
-    # Icon theme
-    lookandfeeltool --apply org.kde.breeze.desktop || true
-    kwriteconfig6 --file kdeglobals --group Icons --key Theme "$ICON_THEME"
-
-    # Color scheme
-    kwriteconfig6 --file kdeglobals --group General --key AccentColor "$ACCENT_COLOR"
-    plasma-apply-colorscheme BreezeDark
+echo "https://github.com/PapirusDevelopmentTeam/papirus-folders"
+echo "Which folder colour would you like to apply? (Enter nothing to skip)"
+read foldercolour
+foldercolour={$foldercolour,,}
+if [ -n $foldercolour ]; then
+    echo "Applying folder colours..."
+    papirus-folders -C $foldercolour --theme Papirus-Dark
 else
-    continue
+    echo "Skipped folder colours..."
 fi
 
 # Wallpaper
-if [ -d "$WALLPAPER_PATH" ]; then
+read -p "Add my wallpapers? [Y/n]" wlppr
+wlppr={$wlppr,,}
+if [[ $wlppr = "y" || $wlppr = "yes" || -z $wlppr ]]; then
     echo "Copying wallpapers..."
     mkdir -p ~/Pictures/Backgrounds/
     cp -r "$WALLPAPER_PATH"/* ~/Pictures/Backgrounds/
+else
+    echo "Skipping wallpapers..."
 fi
 
 # === Fonts ===
@@ -300,38 +280,6 @@ if [ -d "$DOTFILES_DIR/fonts" ]; then
     mkdir -p ~/.local/share/fonts/
     cp -r "$DOTFILES_DIR/fonts/"* ~/.local/share/fonts/
     fc-cache -fv
-fi
-
-# === Icons ===
-if [ -d "$DOTFILES_DIR/icons" ]; then
-    echo "Installing custom icons..."
-    mkdir -p ~/.local/share/fonts/
-    cp -r "$DOTFILES_DIR/icons/"* ~/.local/share/icons/
-    fc-cache -fv
-fi
-
-# === KDE Only, skip otherwise ===
-if command -v plasmashell &> /dev/null; then
-    # === Config ===
-    if [ -d "$DOTFILES_DIR/kde-config" ]; then
-        echo "Copying config files..."
-        cp -r "$DOTFILES_DIR/kde-config/"* ~/.config/
-    fi
-
-    # === Konsole config ===
-    if [ -d "$DOTFILES_DIR/konsole" ]; then
-        echo "Applying Konsole profiles and color schemes..."
-        mkdir -p ~/.local/share/konsole/
-        cp -r "$DOTFILES_DIR/konsole/"* ~/.local/share/konsole/
-    fi
-else
-    echo "Plasma not installed, apply icons, colours, fonts, and wallpapers manually..."
-fi
-
-# === Change default shell to zsh ===
-if [ "$SHELL" != "$(which zsh)" ]; then
-    echo "Changing default shell to zsh..."
-    chsh -s "$(which zsh)"
 fi
 
 # === Package Installation ===
