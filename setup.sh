@@ -167,7 +167,7 @@ if [ $LINUX = "fedora" ]; then
         echo "Installing GPU accelerated media packages for Intel..."
         $PKG_INSTALL intel-media-driver libva-utils
 
-    elif [ $gpu = "nvidia"] ; then
+    elif [ $gpu = "nvidia" ] ; then
         echo "Installing NVIDIA driver and GPU accelerated media packages..."
         $PKG_INSTALL akmod-nvidia xorg-x11-drv-nvidia-cuda libva-nvidia-driver
 
@@ -219,7 +219,7 @@ else
     read -p "Found existing .zshrc, Overwrite .zshrc ? [Y/n]" owzsh
     owzsh=${owzsh,,}
     if [[ $owzsh = "y" || $owzsh = "yes" || -z $owzsh ]]; then
-        echo "1 Overwriting .zshrc ..."
+        echo "Overwriting .zshrc ..."
         cp -f "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
     else
         continue
