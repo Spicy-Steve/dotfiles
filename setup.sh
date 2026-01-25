@@ -231,7 +231,7 @@ if [ -f "$HOME/.p10k.zsh" ]; then
     echo "Copying powerlevel10k configuration..."
     cp -f "$DOTFILES_DIR/.p10k.zsh" "$HOME/.p10k.zsh"
 else
-    read -p "Overwrite .p10k.zsh ? [Y/n]" ptenk
+    read -p "Found existing .p10k.zsh, Overwrite .p10k.zsh ? [Y/n]" ptenk
     ptenk=${ptenk,,}
     if [[ $ptenk = "y" || $ptenk = "yes" || -z $ptenk ]]; then
         echo "Overwriting .p10k.zsh ..."
