@@ -339,12 +339,12 @@ read -p "Would you like to install packages? [Y/n]" appsq
 appsq=${appsq,,}
 if [[ $appsq = "y" || $appsq = "yes" || -z $appsq ]]; then
     if [ $LINUX = "fedora" ]; then
-        $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects fastfetch goverlay mangohud python python-websockets qbittorrent qt6-qtwebsockets-devel speedtest-cli steam vlc vlc-plugins-all
+        $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects fastfetch mangohud python python-websockets qbittorrent qt6-qtwebsockets-devel speedtest-cli steam vlc vlc-plugins-all
         
         echo "Enabling flatpak repository..."
         sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
     elif [ $LINUX = "arch" ]; then
-        $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects ffmpeg fastfetch firefox flatpak goverlay mangohud partitionmanager prismlauncher python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
+        $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects ffmpeg fastfetch firefox flatpak mangohud partitionmanager prismlauncher python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
     elif [ $LINUX = "debian" ]; then
         $PKG_INSTALL ark btop cava cmatrix discord easyeffects fastfetch flatpak google-android-platform-tools-installer goverlay mangohud python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
     fi
@@ -363,7 +363,7 @@ if [[ $flatpakq = "y" || $flatpakq = "yes" || -z $flatpakq ]]; then
     gamefpk=${gamefpk,,}
     if [[ $gamefpk = "y" || $gamefpk = "yes" || -z $gamefpk ]]; then
         echo "Installing gaming flatpaks..."
-        flatpak install -y com.github.Matoking.protontricks net.davidotek.pupgui2 com.steamgriddb.SGDBoop
+        flatpak install -y com.github.Matoking.protontricks net.davidotek.pupgui2 com.steamgriddb.SGDBoop io.github.radiolamp.mangojuice
     else
         echo "Skipping..."
         continue
