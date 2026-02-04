@@ -96,7 +96,7 @@ fi
 
 # === Install dependencies ===
 echo "Installing dependencies..."
-$PKG_INSTALL git zsh curl wget cowsay
+$PKG_INSTALL git zsh curl wget cowsay fwupd
 
 # === Install yay (AUR helper, Arch only) ===
 if [ $LINUX = "arch" ]; then
