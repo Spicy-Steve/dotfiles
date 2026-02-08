@@ -123,11 +123,18 @@ alias reinstallyay="cd ~ && sudo rm -r ~/.yay && git clone https://aur.archlinux
 # <--- systemctl --->
 alias sysenable="sudo systemctl enable --now"
 alias sysdisable="sudo systemctl disable --now"
+alias tailscaleup="sysenable tailscaled && sudo tailscale up"
+alias tailscaledown="sysdisable tailscaled && sudo tailscale down"
 
 # <--- MISC --->
 alias editzsh="kwrite ~/.zshrc"
 alias kw="kwrite"
 alias ff="fastfetch"
+
+# <--- Flatpak --->
+alias fpk="flatpak"
+alias fpkup="flatpak update -y"
+alias fpkrm="flatpak remove"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
