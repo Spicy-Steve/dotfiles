@@ -241,6 +241,19 @@ else
     fi
 fi
 
+# === Copy fastfetch config ===
+if [ -f $HOME/.config/fastfetch/config.jsonc ]; then
+    echo "Copying fastfetch configuration..."
+    mkdir "$HOME/.config/fastfetch"
+    cp -f "$DOTFILES_DIR/ffconfig.jsonc" "$HOME/.config/fastfetch/config.jsonc"
+else
+    read -p "Found existing fastfetch config.jsonc, Overwrite it? [Y/n]" fetch
+    fetch=${fetch,,}
+    if [[ $fetch = "y" || $fetch = "yes" || -z fetch ]]; then
+        echo "Overwriting fastfetch config..."
+        cp -f "$DOTFILES_DIR/ffconfig.jsonc" "$HOME/.config/fastfetch/config.jsonc"
+fi
+
 # === KDE Appearance ===
 echo "Applying KDE customization..."
 
@@ -344,7 +357,7 @@ if [[ $appsq = "y" || $appsq = "yes" || -z $appsq ]]; then
         echo "Enabling flatpak repository..."
         sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
     elif [ $LINUX = "arch" ]; then
-        $PKG_INSTALL android-tools ark btop cava cmatrix discord easyeffects ffmpeg fastfetch firefox flatpak mangohud partitionmanager prismlauncher python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
+        $PKG_INSTALL android-tools ark btop cava discord easyeffects ffmpeg fastfetch firefox flatpak mangohud partitionmanager prismlauncher python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
     elif [ $LINUX = "debian" ]; then
         $PKG_INSTALL ark btop cava cmatrix discord easyeffects fastfetch flatpak google-android-platform-tools-installer goverlay mangohud python python-websockets qbittorrent qt6-websockets speedtest-cli steam vlc vlc-plugins-all
     fi
