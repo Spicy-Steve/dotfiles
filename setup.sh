@@ -111,28 +111,43 @@ else
     echo "Skipping yay install - not an Arch system."
 fi
 
+# === Copy Pacman config (Arch only) ===
+if [ $LINUX = "arch" ]; then
+    if [ -f "$DOTFILES_DIR/pacman.conf" ]; then
+        echo "Applying custom pacman configuration..."
+        sudo cp -f "$DOTFILES_DIR/pacman.conf" /etc/pacman.conf
+    else
+        echo "No pacman.conf found in dotfiles, skipping..."
+    fi
+fi
+
 # === Ask for GPU vendor ===
 while true; do
-    read -p "Enter GPU vendor (AMD/NVIDIA/Intel): " gpu
+    echo "Enter GPU driver from list:"
+    echo "1) amd"
+    echo "2) nvidia-open (20/30/50 series)"
+    echo "3) nvidia-580xx (10/16/40 series)"
+    echo "4) intel"
+    echo "5) skip (not reccomended)"
     gpu=${gpu,,}
     case "$gpu" in
-        amd|intel|nvidia)
+        1|2|3|4|5)
             break
             ;;
         *)
-            echo "Invalid entry. Please enter AMD, NVIDIA, or Intel."
+            echo "Invalid entry. Please enter a valid option from the list."
             ;;
     esac
 done
 
 # === Install GPU Drivers (Arch) ===
-if [ $LINUX = "arch" ]; then 
+if [ $LINUX = "1" ]; then 
     if [ $gpu = "amd" ]; then
         $PKG_INSTALL mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon xf86-video-amdgpu
-    elif [ $gpu = "intel" ]; then
-        $PKG_INSTALL mesa lib32-mesa vulkan-intel lib32-vulkan-intel xf86-video-intel
-    elif [ $gpu = "nvidia" ]; then
-        $PKG_INSTALL nvidia nvidia-dkms nvidia-utils lib32-nvidia-utils
+    elif [ $gpu = "4" ]; then
+        $PKG_INSTALL mesa lib32-mesa vulkan-intel lib32-vulkan-intel intel-media-driver
+    elif [ $gpu = "2" ]; then
+        $PKG_INSTALL nvidia-open-dkms nvidia-utils lib32-nvidia-utils
         read -p "Install CUDA? [Y/n]" cuda
         cuda=${cuda,,}
         if [[ $cuda = "y" || $cuda = "yes" || -z $cuda ]]; then
@@ -140,6 +155,18 @@ if [ $LINUX = "arch" ]; then
         else
             echo "Skipping CUDA installation..."
         fi
+    elif [ $gpu = "3" ]; then
+        $PKG_INSTALL lib32-nvidia-utils
+        yay -S nvidia-580xx-dkms nvidia-580xx-utils
+        read -p "Install CUDA? [Y/n]" cuda
+        cuda=${cuda,,}
+        if [[ $cuda = "y" || $cuda = "yes" || -z $cuda ]]; then
+            $PKG_INSTALL cuda
+        else
+            echo "Skipping CUDA installation..."
+        fi
+    elif [ $gpu = "5" ]; then
+        echo "Skipping driver installation..."
     fi
 fi
 
@@ -394,16 +421,6 @@ if [ $LINUX = "arch" ]; then
         yay -S --needed visual-studio-code-bin plasma6-applets-kurve coolercontrol-bin
     else
         echo "Skipping AUR package installation..."
-    fi
-fi
-
-# === Copy Pacman config (Arch only) ===
-if [ $LINUX = "arch" ]; then
-    if [ -f "$DOTFILES_DIR/pacman.conf" ]; then
-        echo "Applying custom pacman configuration..."
-        sudo cp -f "$DOTFILES_DIR/pacman.conf" /etc/pacman.conf
-    else
-        echo "No pacman.conf found in dotfiles, skipping..."
     fi
 fi
 
